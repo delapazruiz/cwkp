@@ -1,8 +1,31 @@
 .navbar-brand {
     height: 83px;
+    margin-right: 0px;
+    margin-top: 0px;
     width: 218px;
 }
 
 .navbar-inverse {
-    background-color: #2c689c;
+    background-color: #204045;
+}
+
+.navbar-inverse {
+    border-color: #204045;
+}
+
+.jumbotron {
+    background: #028baf;
+    color: #fff;
+    padding: 40px 0 60px;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+    margin-top: -10px;
+}
+
+.jumbotron {
+    background: #208391;
+    }
+
+body {
+
+    background: #204045;
 }
