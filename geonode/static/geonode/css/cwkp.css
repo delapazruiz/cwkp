@@ -1,5 +1,5 @@
 .navbar-brand {
-    height: 83px;
+    height: 72px;
     margin-right: 0px;
     margin-top: 0px;
     width: 218px;
@@ -28,4 +28,13 @@
 body {
 
     background: #204045;
+}
+
+footer {
+
+    padding: 50px;
+}
+
+body.layers li#nav_layers a {
+    color: #999;
 }
