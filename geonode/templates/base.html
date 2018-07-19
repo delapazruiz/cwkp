@@ -72,6 +72,15 @@
                         </li>
 
               <li id="nav_layers" class="">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Add<i class="fa fa-angle-down fa-lg"></i></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="/maps/">Data</a></li>
+                            <li><a href="/layers/">Guidelines</a></li>
+
+                          </ul>
+                        </li>
+
+              <li id="nav_layers" class="">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Learn<i class="fa fa-angle-down fa-lg"></i></a>
                             <ul class="dropdown-menu">
                                           <li><a href="/maps/">FAQs</a></li>
@@ -86,15 +95,6 @@
                            <ul class="dropdown-menu">
                                            <li><a href="/maps/">Contact</a></li>
                                            <li><a href="/layers/">Acknowledgements</a></li>
-
-                                         </ul>
-                                      </li>
-
-              <li id="nav_layers" class="">
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Add<i class="fa fa-angle-down fa-lg"></i></a>
-                           <ul class="dropdown-menu">
-                                            <li><a href="/maps/">Data</a></li>
-                                            <li><a href="/layers/">Guidelines</a></li>
 
                                          </ul>
                                       </li>
@@ -190,12 +190,6 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-8">
-            <img src = "{{ STATIC_URL}}geonode/img/logo1.png">
-            {% trans "Setted up by" %} <a href="">{% trans "UNU-FLORES: WRM" %}</a> <em>{% trans "Alpha version" %}</em> |
-            <a href="{% url "developer" %}">{% trans "Developers" %}</a> |
-            <a href="{% url "about" %}">{% trans "About" %}</a>
-          </div>
           <div class="col-md-4">
             <label class="hidden">{% trans "Language" %}</label>
             {% if csrf_token != "NOTPROVIDED" %}
@@ -212,6 +206,30 @@
             </form>
             {% endif %}
           </div>
+          <div class="col-md-8">
+
+            <ul class="list-unstyled">
+            <li><img src="/static/geonode/img/logo1.png"></li>
+              <p class="text">
+              <li><strong>UNU-FLORES<br>
+                UNU Institute for Integrated Management of<br>
+                Material Fluxes and of Resources<br>
+                Advancing a Nexus Approach to the<br>
+                Sustainable Management of Water, Soil and Waste<br>
+              </strong></li>
+              </p>
+
+              <li>Ammonstrasse 74<br>
+                Dresden, 01067<br>
+                Germany<br>
+                <p class="text">Tel: +49 351 892193 70</p>
+              </li>
+            </ul><strong>
+
+  Setted up by <a href="">UNU-FLORES: WRM</a> <em>Alpha version</em> |
+            <a href="/developer/">Developers</a> |
+            <a href="/about/">About</a>
+          </strong></div>
         </div>
       </div>
     </footer>
