@@ -873,7 +873,7 @@ except ImportError:
     pass
 
 try:
-    BING_LAYER = {    
+    BING_LAYER = {
         "source": {
             "ptype": "gxp_bingsource",
             "apiKey": BING_API_KEY
