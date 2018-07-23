@@ -94,6 +94,7 @@
                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<i class="fa fa-angle-down fa-lg"></i></a>
                            <ul class="dropdown-menu">
                                            <li><a href="/maps/">Contact</a></li>
+                                           <li><a href="/about/contact-us">Concept note</a></li>
                                            <li><a href="/layers/">Acknowledgements</a></li>
 
                                          </ul>
@@ -191,18 +192,28 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
+
+            <ul class="list-unstyled">
+                <li>  <a href="/about/contact-us">Contact</a> </li>
+                <li>  <a href="/about/contact-us">Concept note</a> </li>
+                <li>  <a href="/terms-of-use">Acknowledgements</a> </li>
+                <li>  <a href="/copyright">Copyright</a> </li>
+                <li>  <a href="/privacy">Disclaimer</a> </li>
+
+            <ul>
+
             <label class="hidden">{% trans "Language" %}</label>
             {% if csrf_token != "NOTPROVIDED" %}
             {% get_current_language as LANGUAGE %}
             <form class="form-inline" action="/i18n/setlang/" method="post">
             {% csrf_token %}
-              <select class="col-md-6 pull-right" name="language" onchange="javascript:form.submit()">
+              <!--<select class="col-md-6 pull-right" name="language" onchange="javascript:form.submit()">
                 {% for lang in LANGUAGES %}
                 <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
                   {{ lang.1 }}
                 </option>
                 {% endfor %}
-              </select>
+              </select> -->
             </form>
             {% endif %}
           </div>

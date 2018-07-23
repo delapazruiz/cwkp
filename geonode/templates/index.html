@@ -13,11 +13,21 @@
   <div class="jumbotron">
     <div class="container">
       <h1>{% trans "Constructed Wetlands Knowledge Platform" %}</h1>
+
       <h2>{% trans "UNU-FLORES: Water Resources Management Unit" %}</h2>
+
+      <p>{% blocktrans %} The one-stop solution providing data and information about Constructed Wetlands to support research, policy-making, implementiation,and financing of Nature-based Solutions for sustainable development. <a href="https://flores.unu.edu/en/research/units/water-resources-management#team">More info.</a>{% endblocktrans %}</p>
+      <p>{% blocktrans %}Amount of Constructed Wetlands currently stored in the Database:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 57/140 {% endblocktrans %}</p>
+      <p>{% blocktrans %}Volume of wastwater treated by Constructed Wetlands currently stored: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --.-- {% endblocktrans %}</p>
+
       <img src = "{{ STATIC_URL}}geonode/img/bodyimage.png">
-		<p>{% blocktrans %}An open source platform for sharing geospatial data and maps about constructed wetlands.{% endblocktrans %}</p>
-		<p>{% blocktrans %}If you have any questions contact <a href="https://flores.unu.edu/en/research/units/water-resources-management#team">UNU-FLORES WRM Unit</a>.{% endblocktrans %}</p>
-      <a class="btn btn-default btn-lg" target="_blank" href="https://flores.unu.edu/en/news/news/constructed-wetlands-to-turn-wastewater-into-energy.html" role="button">{% blocktrans %}Get Started &raquo;{% endblocktrans %}</a>
+      <h3>{% blocktrans %} Call for participation: <a href="https://flores.unu.edu/en/research/units/water-resources-management#team">Fill out the Questionnaire.</a>{% endblocktrans %}</h3>
+      <h3><a class="btn btn-default btn-lg" target="_blank" href="https://flores.unu.edu/en/news/news/constructed-wetlands-to-turn-wastewater-into-energy.html" role="button">{% blocktrans %}Get Information &raquo;{% endblocktrans %}</a></h3>
+
+		<!-- <p>{% blocktrans %}An open source platform for sharing geospatial data and maps about constructed wetlands.{% endblocktrans %}</p>
+		<p>{% blocktrans %}If you have any questions contact <a href="https://flores.unu.edu/en/research/units/water-resources-management#team">UNU-FLORES WRM Unit</a>.{% endblocktrans %}</p> -->
+
+
     </div>
   </div>
   {% include "_status_message.html" %}

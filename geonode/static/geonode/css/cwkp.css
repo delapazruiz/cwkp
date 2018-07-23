@@ -17,7 +17,7 @@
     background: #028baf;
     color: #fff;
     padding: 40px 0 60px;
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0);
     margin-top: -10px;
 }
 
@@ -37,4 +37,25 @@ footer {
 
 body.layers li#nav_layers a {
     color: #999;
+}
+
+.jumbotron h1, .jumbotron .h1 {
+    text-align: center;
+}
+
+h2, .h2 {
+    text-align: center;
+}
+
+.jumbotron p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+h3, .h3 {
+    text-align: center;
+}
+
+.jumbotron a {
+    color: #204045;
 }
