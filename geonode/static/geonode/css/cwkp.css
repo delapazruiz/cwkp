@@ -45,6 +45,7 @@ body.layers li#nav_layers a {
 
 h2, .h2 {
     text-align: center;
+    color: #204045;
 }
 
 .jumbotron p {
@@ -54,8 +55,33 @@ h2, .h2 {
 
 h3, .h3 {
     text-align: center;
+    color: #204045;
+}
+
+h4, .h4 {
+
+    color: #49b3c5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h4:hover, h4:focus {
+
+    color: #204045;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .jumbotron a {
+    color: #204045;
+}
+
+a {
+    color: #49b3c5;
+}
+
+a:hover, a:focus {
     color: #204045;
 }
