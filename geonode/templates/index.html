@@ -19,9 +19,9 @@
 
       <!--<h2>{% trans "UNU-FLORES: Water Resources Management Unit" %}</h2>-->
 
-      <p>{% blocktrans %} The one-stop solution providing data and information about Constructed Wetlands to support research, policy-making, implementiation,and financing of Nature-based Solutions for sustainable development. <a href="https://flores.unu.edu/en/research/units/water-resources-management#team">More info.</a>{% endblocktrans %}</p>
-      <p>{% blocktrans %}Amount of Constructed Wetlands currently stored in the Database:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 57/140 {% endblocktrans %}</p>
-      <p>{% blocktrans %}Volume of wastwater treated by Constructed Wetlands currently stored: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --.-- {% endblocktrans %}</p>
+    <h2>{% blocktrans %} The one-stop solution providing data and information about Constructed Wetlands to support research, policy-making, implementiation,and financing of Nature-based Solutions for sustainable development. <a href="https://flores.unu.edu/en/research/units/water-resources-management#team"> <em>More info. </em></a>{% endblocktrans %}</h2>
+      <p>{% blocktrans %}Amount of Constructed Wetlands currently stored in the Database:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>57/140</em>{% endblocktrans %}</p>
+      <p>{% blocktrans %}Volume of wastwater treated by Constructed Wetlands currently stored: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>--.--</em>{% endblocktrans %}</p>
 
       <img src = "{{ STATIC_URL}}geonode/img/bodyimage.png">
       <!--<h3>{% blocktrans %} Call for participation: <a href="https://flores.unu.edu/en/research/units/water-resources-management#team">Fill out the Feedback Questionnaire.</a>{% endblocktrans %}</h3> -->
@@ -40,8 +40,8 @@
 
   {% block mainbody %}
   <div class="container">
-    <h2> Get Information </h2>
-    <h3>(Under Development)</h3>
+    <h3> Get Information </h3>
+    <h4>(Under Development)</h4>
 
     <div class="col-xs-4 col-sm-2">
       					<a href="/search/?limit=100&amp;offset=0&amp;category__identifier__in=boundaries&amp;category__identifier__in=planningCadastre" data-toggle="tooltip" data-placement="auto" title="" data-original-title="Political and administrative boundaries. Land use maps, zoning maps, cadastral surveys, land ownership.">
@@ -65,7 +65,7 @@
                           					<a href="/search/?limit=100&amp;offset=0&amp;category__identifier__in=climatologyMeteorologyAtmosphere" data-toggle="tooltip" data-placement="auto" title="" data-original-title="Cloud cover, weather, climate, atmospheric conditions, climate change, precipitation">
                           						<div class="category">
                           						  <h4><i class="fa fa-building-o fa-3x"></i></h4>
-                          							<h4>Intergovernmental Organizations</h4>
+                          							<h4>Inter-governmental Organizations</h4>
                           						</div>
                           					</a>
                           				</div>

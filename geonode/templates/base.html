@@ -56,7 +56,7 @@
             {% block tabs %}
 
             <li id="nav_layers" class="">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Get<i class="fa fa-angle-down fa-lg"></i></a>
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> {% trans "Get" %} &nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></a>
                           <ul class="dropdown-menu">
                             <li><a href="/maps/">Maps</a></li>
                             <li><a href="/documents/">Statistical information</a></li>
@@ -70,7 +70,7 @@
                         </li>
 
               <!-- <li id="nav_layers" class="">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Add<i class="fa fa-angle-down fa-lg"></i></a>
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Add<i class="fa fa-caret-down fa-lg"></i></a>
                           <ul class="dropdown-menu">
                             <li><a href="/maps/">Data</a></li>
                             <li><a href="/layers/">Guidelines</a></li>
@@ -79,25 +79,25 @@
                         </li> -->
 
               <li id="nav_layers" class="">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Engage<i class="fa fa-angle-down fa-lg"></i></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Engage" %} &nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></a>
                             <ul class="dropdown-menu">
-                                          <li><a href="/maps/">Data</a></li>
-                                          <li><a href=<"/layers/">Guidelines</a></li>
+                                          <li><a href="/maps/">{% trans "Data" %}</a></li>
+                                          <li><a href=<"/layers/">{% trans "Guidelines" %}</a></li>
                                           <li><a href="/maps/">FAQs</a></li>
-                                          <li><a href="/layers/">Forum</a></li>
+                                          <li><a href="/layers/">{% trans "Forum" %}</a></li>
                                           <li><a href="/documents/">Handbook/Tutorial</a></li>
 
                                         </ul>
                                      </li>
 
               <li id="nav_layers" class="">
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<i class="fa fa-angle-down fa-lg"></i></a>
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "About" %} &nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></a>
                            <ul class="dropdown-menu">
-                                           <li><a href="/copyright">Copyright</a> </li>
-                                           <li><a href="/privacy">Disclaimer</a> </li>
-                                           <li><a href="/about/contact-us">Contact</a></li>
-                                           <li><a href="/layers/">Acknowledgements</a></li>
-                                           <li><a href="/maps/">About the Platform</a></li>
+                                           <li><a href="/copyright">{% trans "Copyright" %}</a> </li>
+                                           <li><a href="/privacy">{% trans "Disclaimer" %}</a> </li>
+                                           <li><a href="/about/contact-us">{% trans "Contact" %}</a></li>
+                                           <li><a href="/layers/">{% trans "Acknowledgements" %}</a></li>
+                                           <li><a href="/maps/">{% trans "About the Platform" %}</a></li>
                                          </ul>
                                       </li>
 
@@ -195,28 +195,30 @@
           <div class="col-md-4">
 
             <ul class="list-unstyled">
+              <ul>
+              <label class="hidden">{% trans "Language" %}</label>
+              {% if csrf_token != "NOTPROVIDED" %}
+              {% get_current_language as LANGUAGE %}
+              <form class="form-inline" action="/i18n/setlang/" method="post">
+              {% csrf_token %}
+                <select class="col-md-6 pull-right" name="language" onchange="javascript:form.submit()">
+                  {% for lang in LANGUAGES %}
+                  <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
+                    {{ lang.1 }}
+                  </option>
+                  {% endfor %}
+                </select>
+              </form>
+              {% endif %}
+              </ul>
+
                 <li><a href="/copyright">Copyright</a> </li>
                 <li><a href="/privacy">Disclaimer</a> </li>
                 <li><a href="/about/contact-us">Contact</a></li>
                 <li><a href="/layers/">Acknowledgements</a></li>
                 <li><a href="/maps/">About the Platform</a></li>
 
-            <ul>
 
-            <label class="hidden">{% trans "Language" %}</label>
-            {% if csrf_token != "NOTPROVIDED" %}
-            {% get_current_language as LANGUAGE %}
-            <form class="form-inline" action="/i18n/setlang/" method="post">
-            {% csrf_token %}
-              <!--<select class="col-md-6 pull-right" name="language" onchange="javascript:form.submit()">
-                {% for lang in LANGUAGES %}
-                <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
-                  {{ lang.1 }}
-                </option>
-                {% endfor %}
-              </select> -->
-            </form>
-            {% endif %}
           </div>
           <div class="col-md-8">
 

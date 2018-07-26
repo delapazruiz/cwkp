@@ -1,3 +1,7 @@
+
+
+
+
 .navbar-brand {
     height: 70px;
     margin-right: 0px;
@@ -7,10 +11,25 @@
 
 .navbar-inverse {
     background-color: #204045;
+border-color: #204045;
 }
 
-.navbar-inverse {
-    border-color: #204045;
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #fff;
+    color: #204045;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #999;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: #0003;
 }
 
 .jumbotron {
@@ -28,6 +47,7 @@
 body {
 
     background: #204045;
+    font-size: 15px;
 }
 
 footer {
@@ -44,13 +64,15 @@ body.layers li#nav_layers a {
 }
 
 h2, .h2 {
-    text-align: center;
-    color: #204045;
+    text-align: justify;
+    color: #fff;
+    font-size: 20px;
 }
 
 .jumbotron p {
-    text-align: justify;
+    text-align: center;
     margin-bottom: 20px;
+    font-size: 15px;
 }
 
 h3, .h3 {
@@ -64,6 +86,7 @@ h4, .h4 {
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
+    font-size: 15px;
 }
 
 h4:hover, h4:focus {
@@ -72,6 +95,7 @@ h4:hover, h4:focus {
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
+    font-size: 15px;
 }
 
 .jumbotron a {
@@ -80,8 +104,19 @@ h4:hover, h4:focus {
 
 a {
     color: #49b3c5;
+    font-size: 15px;
 }
 
 a:hover, a:focus {
     color: #204045;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar-form {
+    margin-bottom: 0px;
 }
