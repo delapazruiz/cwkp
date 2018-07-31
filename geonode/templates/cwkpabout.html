@@ -8,6 +8,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
+
+
 {% block body_outer %}
 <div class="page-header">
   <h3>{% trans "About the Constructed Wetlands Knowledge Platform" %}</h3>
@@ -30,100 +33,111 @@ With the next information, we would like to provide an overview to you and expla
 project is about.
 </p>
 
-<div class="container">
-  <h3><button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo1">I. Problem <i class="fa fa-caret-down fa-lg"></i></button></h3>
-  <div id="demo1" class="collapse">
-    <p class="generic">
-      Globally, human and environmental health is endangered in many areas. In 2015, approx. <b>2.4 billion
-      people</b> were still using unimproved sanitation facilities. Moreover, sources estimate that around
-      <b>80% of all wastewater worldwide</b> is released untreated into the environment, leading to
-      deteriorating water quality. The international community seeks to achieve <b>universal access</b> to
-      adequate and equitable sanitation as well as to improve water quality by <b>halving the proportion</b> of
-      untreated wastewater and increasing its safe reuse (targets 6.2 and 6.3 of the Agenda 2030).
-      Constructed Wetlands (CWs) are nature-based solutions which can contribute to achieve the
-      sustainable development goals, but it remains unclear to which extent, as, currently, there is no
-      knowledge about the contribution of constructed wetland systems, e.g. to the global amount of
-      treated wastewater. Moreover, several studies claimed limited data availability in the recent past.
-    </p>
-  </div>
-</div>
+<div class="text-left">
+  <div class="accordion" id="myAccordion">
+    <div class="panel">
+          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-1" data-parent="#myAccordion">I. Problem&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+          <div id="collapsible-1" class="collapse" class="btn btn-primary">
+              <p class="generic">Globally, human and environmental health is endangered in many areas. In 2015, approx. <b>2.4 billion
+              people</b> were still using unimproved sanitation facilities. Moreover, sources estimate that around
+              <b>80% of all wastewater worldwide</b> is released untreated into the environment, leading to
+              deteriorating water quality. The international community seeks to achieve <b>universal access</b> to
+              adequate and equitable sanitation as well as to improve water quality by <b>halving the proportion</b> of
+              untreated wastewater and increasing its safe reuse (targets 6.2 and 6.3 of the Agenda 2030).
+              Constructed Wetlands (CWs) are nature-based solutions which can contribute to achieve the
+              sustainable development goals, but it remains unclear to which extent, as, currently, there is no
+              knowledge about the contribution of constructed wetland systems, e.g. to the global amount of
+              treated wastewater. Moreover, several studies claimed limited data availability in the recent past.</p>
+          </div>
+          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-2" data-parent="#myAccordion">II. Goal&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+          <div id="collapsible-2" class="collapse">
+              <p class="generic">  The United Nations University Institute for Integrated Management of Material Fluxes and of
+                Resources (UNU-FLORES) likes to create <b>one central platform</b> about Constructed Wetlands worldwide,
+                consisting of a comprehensive database, including system properties and performance parameters of
+                CWs, and a visual interface representing their geographic distribution through a WebGIS. Additional
+                features may (eventually) include data manipulation, upload and download functions. The aim is to
+                <b>assess the amount of wastewater that is treated globally by constructed wetland systems.</b>
 
+                Moreover, UNU-FLORES wishes to <b>support scientists, representatives of international organizations,
+                implementers, funding bodies, further experts and the public on a long-term basis</b>, e.g. in CW
+                research, policy-making, financing, implementation, and operation.</p>
+          </div>
+          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-3" data-parent="#myAccordion">III. Participatory Approach&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+          <div id="collapsible-3" class="collapse">
+              <p class="generic">
+                To shape this complex web solution according to the needs of its potential users, <b>UNU-FLORES
+                has been inviting experts</b>, particularly agency focal points for the monitoring of SDG 6,
+                researchers from the Helmholtz-Centre for Environmental Research (UFZ), members of the IWAspecialist group on Wetland Systems for Water Pollution Control, as well as further specialists,
+                for the following purposes:
+                </p>
 
-<div class="container">
-  <h3><button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">II. Goal<i class="fa fa-caret-down fa-lg"></i></button></h3>
-  <div id="demo2" class="collapse">
+                <p class="genericli">• Taking part in a short preliminary survey regarding feedback of the alpha version of the platform and,</p>
+                <p class="genericli">• Providing feedback and data during the operation of database and WebGIS of the present alpha version.</p>
+          </div>
+          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-4" data-parent="#myAccordion">IV.The Overall Approach in Detail&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+          <div id="collapsible-4" class="collapse" class="btn btn-primary">
+            <p class="generic">
+              The project work will begin with a <b>comprehensive review of existing databases and literature</b> about
+              Constructed Wetlands, to gain an overview of available data which might be useful for suggesting
+              potential database variables to stakeholders. This comprehensive review includes a special emphasis
+              on sludge drying reed beds. Meanwhile, a <b>short preliminary survey</b> will be sent out to the experts
+              willing to collaborate. Then, the <b>stakeholder survey</b> will be designed based on the comprehensive
+              literature review as well as the responses to the short preliminary survey. After the first internal
+              feedback round, the experts will also be asked about their <b>feedback regarding the draft stakeholder
+              survey.</b> Their remarks will be considered for the preparation of the final stakeholder survey, which
+              will be widely made available to cooperating experts, to stakeholders and networks that have been
+              mentioned in the responses to the pre-survey, as well as through other communication channels.
+          </p>
 
-    <p class="generic">
-      The United Nations University Institute for Integrated Management of Material Fluxes and of
-      Resources (UNU-FLORES) likes to create <b>one central platform</b> about Constructed Wetlands worldwide,
-      consisting of a comprehensive database, including system properties and performance parameters of
-      CWs, and a visual interface representing their geographic distribution through a WebGIS. Additional
-      features may (eventually) include data manipulation, upload and download functions. The aim is to
-      <b>assess the amount of wastewater that is treated globally by constructed wetland systems.</b>
+          <p class="generic">
+              The <b>implementation of the global Constructed Wetlands database and the appurtenant WebGIS</b>
+              will follow, based on the results of the comprehensive review of scientific literature and databases
+              as well as the stakeholder survey.
+          </p>
 
-      Moreover, UNU-FLORES wishes to <b>support scientists, representatives of international organizations,
-      implementers, funding bodies, further experts and the public on a long-term basis</b>, e.g. in CW
-      research, policy-making, financing, implementation, and operation.
-    </p>
+          <p class="generic">
+              After implementation, cooperating experts will have the chance of
+              being the very first users of the database and WebGIS for their own purposes. If any system
+              improvement seems feasible, we would like to receive your <b>feedback</b> again.
+          </p>
 
-  </div>
-</div>
+          <p class="generic">
+              All in all, through this online information system, UNU-FLORES aims to contribute to the development
+              of integrated strategies for the sustainable development of environmental resources, such as water,
+              soil, and waste.
+            </p>
+          </div>
+          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-5" data-parent="#myAccordion">V. Why are we doing this?&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+          <div id="collapsible-5" class="collapse">
 
-
-  <div class="container">
-    <h3><button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3">III. Participatory Approach <i class="fa fa-caret-down fa-lg"></i></button></h3>
-    <div id="demo3" class="collapse">
-
-      <p class="generic">
-        To shape this complex web solution according to the needs of its potential users, <b>UNU-FLORES
-        has been inviting experts</b>, particularly agency focal points for the monitoring of SDG 6,
-        researchers from the Helmholtz-Centre for Environmental Research (UFZ), members of the IWAspecialist group on Wetland Systems for Water Pollution Control, as well as further specialists,
-        for the following purposes:
-        </p>
-
-        <p class="genericli">&#9830;Taking part in a short preliminary survey regarding feedback of the alpha version of the platform and,</p>
-        <p class="genericli">&#9830;Providing feedback and data during the operation of database and WebGIS of the present alpha version.</p>
+              <p class="genericli">• Achieving water- and related SDGs</p>
+              <p class="genericli">• Knowing the number of Constructed Wetlands in the world and the amount of wastewater they treat to indicate the importance of this technology compared with others</p>
+              <p class="genericli">• Highlight the ‚multifunctionality‘, the multiple services and benefits Constructed Wetlands provide</p>
+          </div>
+          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-6" data-parent="#myAccordion">VI. What are the primary goals of the platform?&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+          <div id="collapsible-6" class="collapse">
+              <p class="generic">• Supporting ...</p>
+              <p class="generic">• Assessing the contribution of constructed wetlands to wastewater treatment and reuse worldwide</p>
+          </div>
+          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-7" data-parent="#myAccordion">VII. What are the target groups?&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+          <div id="collapsible-7" class="collapse" class="btn btn-primary">
+              <p class="generic">• Researchers: ...</p>
+              <p class="generic">• Consulting engineers: ...</p>
+              <p class="generic">• Construction companies: ...</p>
+              <p class="generic">• Intergovernmental Organisations...</p>
+              <p class="generic">• Financial sector...</p>
+              <p class="generic">• Civil Society and its Organisations</p>
+          </div>
+          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-8" data-parent="#myAccordion">VIII. What can you use the platform for?&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+          <div id="collapsible-8" class="collapse">
+              <p class="generic">• Get to know the fundamentals of Constructed Wetlands (Learning Page, Game)</p>
+              <p class="generic">• Get to know Constructed Wetlands in a certain area, maybe in your neighbourhood, and retrieve core information (WebGIS)</p>
+              <p class="generic">• Compare and visualize data (database)</p>
+              <p class="generic">• Provide data to increase the knowledge base on Constructed Wetlands (Crowdsourcing)</p>
+              <p class="generic">• Retrieve extensive information (database download)</p>
+          </div>
+      </div>
     </div>
-  </div>
-
-
-  <div class="container">
-    <h3><button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo4">IV. The Overall Approach in Detail<i class="fa fa-caret-down fa-lg"></i></button></h3>
-    <div id="demo4" class="collapse">
-
-      <p class="generic">
-        The project work will begin with a <b>comprehensive review of existing databases and literature</b> about
-        Constructed Wetlands, to gain an overview of available data which might be useful for suggesting
-        potential database variables to stakeholders. This comprehensive review includes a special emphasis
-        on sludge drying reed beds. Meanwhile, a <b>short preliminary survey</b> will be sent out to the experts
-        willing to collaborate. Then, the <b>stakeholder survey</b> will be designed based on the comprehensive
-        literature review as well as the responses to the short preliminary survey. After the first internal
-        feedback round, the experts will also be asked about their <b>feedback regarding the draft stakeholder
-        survey.</b> Their remarks will be considered for the preparation of the final stakeholder survey, which
-        will be widely made available to cooperating experts, to stakeholders and networks that have been
-        mentioned in the responses to the pre-survey, as well as through other communication channels.
-    </p>
-
-    <p class="generic">
-        The <b>implementation of the global Constructed Wetlands database and the appurtenant WebGIS</b>
-        will follow, based on the results of the comprehensive review of scientific literature and databases
-        as well as the stakeholder survey.
-    </p>
-
-    <p class="generic">
-        After implementation, cooperating experts will have the chance of
-        being the very first users of the database and WebGIS for their own purposes. If any system
-        improvement seems feasible, we would like to receive your <b>feedback</b> again.
-    </p>
-
-    <p class="generic">
-        All in all, through this online information system, UNU-FLORES aims to contribute to the development
-        of integrated strategies for the sustainable development of environmental resources, such as water,
-        soil, and waste.
-      </p>
-
-    </div>
-  </div>
-
+</div>
 
 {% endblock %}

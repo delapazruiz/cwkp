@@ -1,0 +1,37 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "Engage with Data" %} — {{ block.super }} {% endblock %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+{% block body_outer %}
+<div class="page-header">
+  <h3>{% trans "Provide data about constructed wetlands" %}</h3>
+</div>
+<b><p class="lead">{% trans "Provide your local Data" %}</p></b>
+
+
+
+<div class="text-center">
+    <img src = "{{ STATIC_URL}}geonode/img/favicon.ico">
+      <b><p class="lead">Advancing a Nexus Approach to the sustainabl management of environmental resources</p></b>
+      <b><p class="generic">We need your support!</p></b>
+      <p class="generic">
+There is a vast amount of information out there.
+Where are we retrieving information from?
+• Peer-reviewed journal papers
+• Existing databases and web-based geographic information systems
+• Grey and other literature
+What information can you provide?
+How can you provide this information?
+Send us an e-mail! cwkp.flores@unu.edu</p>
+</div>
+
+{% endblock %}

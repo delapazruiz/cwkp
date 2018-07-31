@@ -1,0 +1,42 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "Contact us" %} — {{ block.super }} {% endblock %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+{% block body_outer %}
+<div class="page-header">
+  <h3>{% trans "Contact us" %}</h3>
+</div>
+<b><p class="lead">{% trans "Platform manager" %}</p></b>
+
+
+
+<div class="text-center">
+    <img src = "{{ STATIC_URL}}geonode/img/favicon.ico">
+      <b><p class="lead">Advancing a Nexus Approach to the sustainabl management of environmental resources</p></b>
+
+      <b><p class="generic">Project Manager:</p></b>
+      <b><p class="generic">Ms. Dr. C. Tamara Avellán</p></b>
+      <b><p class="generic">Academic Officer - Water Resources Management</p></b>
+
+
+      <p class="generic">The United Nations University aims to develop sustainable solutions for pressing global problems of
+      human survival and development. The ‘Institute for the Integrated Management of Material Fluxes and
+      of Resources’ (UNU-FLORES) was established in Dresden, Germany in December 2012. The institute
+      engages in research, capacity development, advanced teaching and training. UNU-FLORES develops
+      strategies to resolve pressing issues in the area of sustainable use and integrated management of
+      environmental resources such as soil, water and waste.</p>
+
+      <p class="generic">For user sign-up and further enquiries, please contact: cwkp_flores@unu.edu</p>
+
+</div>
+
+{% endblock %}
