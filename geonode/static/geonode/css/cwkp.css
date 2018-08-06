@@ -155,3 +155,7 @@ img {
 .btn {
     font-size: 18px;
 }
+
+a:hover, a:focus {
+    color: #208391;
+}
