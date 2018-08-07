@@ -141,7 +141,7 @@
           </form>
           <ul class="nav navbar-nav navbar-right">
             {% if not user.is_authenticated and REGISTRATION_OPEN %}
-            <li><a href="{% url "account_signup" %}">{% trans "Register" %}</a></li>
+            <li><a href="{% url "account_signup" %}">{% trans "Sign up" %}</a></li>
             {% endif %}
             {% if user.is_authenticated %}
             <li>
@@ -193,32 +193,42 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
+            <div class="row">
+            <div class=" columns eight phone-five mar-t-10 mar-b-10 pad-footer-links  mainmenu  ">
+            				<a href="/contact">&nbsp;&nbsp;CONTACT&nbsp;&nbsp;</a>
+                    <a href="/copyright">&nbsp;&nbsp;COPYRIGHT&nbsp;&nbsp;</a>
+                    <a href="/disclaimer">&nbsp;&nbsp;PRIVACY STATEMENT&nbsp;&nbsp;</a>
+                    <a href="/termsofuse">&nbsp;&nbsp;TERMS OF USE &nbsp;&nbsp;</a>
+                    <!--<a href="/cwkpabout/">&nbsp;&nbsp;ABOUT&nbsp;&nbsp;</a>-->
+                    <label class="hidden">{% trans "Language" %}</label>
+                      {% if csrf_token != "NOTPROVIDED" %}
+                      {% get_current_language as LANGUAGE %}
+                      <!--<form class="form-inline" action="/i18n/setlang/" method="post">-->
+                      {% csrf_token %}
+                        <select class="col-md-6 pull-right" name="language" onchange="javascript:form.submit()">
+                          {% for lang in LANGUAGES %}
+                          <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
+                            {{ lang.1 }}
+                          </option>
+                          {% endfor %}
+                        </select>
+                      </form>
+                      {% endif %}
+                      <!--</ul>
 
-            <ul class="list-unstyled">
-              <ul>
-              <label class="hidden">{% trans "Language" %}</label>
-              {% if csrf_token != "NOTPROVIDED" %}
-              {% get_current_language as LANGUAGE %}
-              <form class="form-inline" action="/i18n/setlang/" method="post">
-              {% csrf_token %}
-                <select class="col-md-6 pull-right" name="language" onchange="javascript:form.submit()">
-                  {% for lang in LANGUAGES %}
-                  <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
-                    {{ lang.1 }}
-                  </option>
-                  {% endfor %}
-                </select>
-              </form>
-              {% endif %}
-              </ul>
+                        <li><a href="/copyright">Copyright</a> </li>
+                        <li><a href="/disclaimer">Disclaimer</a> </li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/acknowledgements/">Acknowledgements</a></li>
+                        <li><a href="/cwkpabout/">About the Platform</a></li>
+                        <li><a href="https://www.facebook.com/unuflores"><i class="fa fa-facebook-official fa-2x"></i>&nbsp;&nbsp;&nbsp;facebook</a></li>
+                        <li><a href="https://twitter.com/unu_flores"><i class="fa fa-twitter-square fa-2x"></i>&nbsp;&nbsp;&nbsp;twitter</a></li>
+                      --><span class="end">&nbsp;</span><!-- PRESERVED_END //-->
 
-                <li><a href="/copyright">Copyright</a> </li>
-                <li><a href="/disclaimer">Disclaimer</a> </li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/acknowledgements/">Acknowledgements</a></li>
-                <li><a href="/cwkpabout/">About the Platform</a></li>
-                <li><a href="https://www.facebook.com/unuflores"><i class="fa fa-facebook-official fa-2x"></i>&nbsp;&nbsp;&nbsp;facebook</a></li>
-                <li><a href="https://twitter.com/unu_flores"><i class="fa fa-twitter-square fa-2x"></i>&nbsp;&nbsp;&nbsp;twitter</a></li>
+                  </div>
+                  </div>
+
+
 
           </div>
           <div class="col-md-8">
@@ -226,7 +236,8 @@
             <ul class="list-unstyled">
             <li><img src="/static/geonode/img/logo1.png"></li>
               <p class="text">
-              <a href="https://flores.unu.edu/en/"><li><strong>UNU-FLORES<br>
+              <a href="https://flores.unu.edu/en/"><li><strong>
+                UNU-FLORES<br>
                 UNU Institute for Integrated Management of<br>
                 Material Fluxes and of Resources<br>
                 <!--Advancing a Nexus Approach to the<br>
@@ -235,14 +246,14 @@
               </p>
 
               <li>Ammonstrasse 74<br>
-                Dresden, 01067<br>
+                01067 Dresden <br>
                 Germany<br>
-                <p class="text">Tel: +49 351 892193 70</p>
+                <p class="text">Phone: +49 351 892193 70</p>
               </li>
             </ul><strong>
 
-            Setted up by <br>
-            <a href="https://flores.unu.edu/en/research/units/water-resources-management#overview">UNU-FLORES: WRM <br></a>
+            Developed by <br>
+            <a href="https://flores.unu.edu/en/research/units/water-resources-management#overview">UNU-FLORES:<br> Water Resources Management Unit <br></a>
             <em>Alpha version</em> <!--|
             <a href="/developer/">Developers</a> |
             <a href="/about/">About</a>-->

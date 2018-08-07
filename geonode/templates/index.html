@@ -15,20 +15,32 @@
 
   <div class="jumbotron">
     <div class="container">
-      <h1>{% trans "Constructed Wetlands Knowledge Platform" %}</h1>
+      <!-- <h1>{% trans "Constructed Wetlands Knowledge Platform" %}</h1>
+      <h2>{% trans "UNU-FLORES: Water Resources Management Unit" %}</h2>-->
 
-      <!--<h2>{% trans "UNU-FLORES: Water Resources Management Unit" %}</h2>-->
-
-    <h2>{% blocktrans %} The one-stop solution providing data and information about Constructed Wetlands to support research, policy-making, implementiation,and financing of Nature-based Solutions for sustainable development. <a href="https://flores.unu.edu/en/research/units/water-resources-management#team"> <em>More info. </em></a>{% endblocktrans %}</h2>
-      <p>{% blocktrans %}Amount of Constructed Wetlands currently stored in the Database:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>57/140</em>{% endblocktrans %}</p>
-      <p>{% blocktrans %}Volume of wastwater treated by Constructed Wetlands currently stored: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>--.--</em>{% endblocktrans %}</p>
+      <h2>{% trans "&nbsp; " %}</h2>
 
       <img src = "{{ STATIC_URL}}geonode/img/bodyimage.png">
       <!--<h3>{% blocktrans %} Call for participation: <a href="https://flores.unu.edu/en/research/units/water-resources-management#team">Fill out the Feedback Questionnaire.</a>{% endblocktrans %}</h3> -->
-      <h3><a class="btn btn-default btn-lg" target="_blank" href="https://flores.unu.edu/en/news/news/constructed-wetlands-to-turn-wastewater-into-energy.html" role="button">{% blocktrans %}Provide: Feedback &raquo;{% endblocktrans %}</a></h3>
+<!--                <h2>{% trans "&nbsp; " %}</h2> -->
+      <h5>{% blocktrans %} The one-stop solution providing data and information about Constructed Wetlands to support research, policy-making, implementiation,and financing of Nature-based Solutions for sustainable development. <a href="https://flores.unu.edu/en/research/units/water-resources-management#team"> <em>More info. </em></a>{% endblocktrans %}</h5>
+<!--                <h2>{% trans "&nbsp; " %}</h2> -->
+        <p>{% blocktrans %}Amount of Constructed Wetlands currently stored in the Database:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>57/140</em>{% endblocktrans %}</p>
+        <p>{% blocktrans %}Volume of wastwater treated by Constructed Wetlands currently stored: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>--.--</em>{% endblocktrans %}</p>
+<!--                <h2>{% trans "&nbsp; " %}</h2> -->
+
+      <h3>
+        <div class="btn-group">
+        <a class="btn btn-default btn-lg" target="_blank" href="https://flores.unu.edu/en/news/news/constructed-wetlands-to-turn-wastewater-into-energy.html" role="button">{% blocktrans %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; «&nbsp;Provide: Data &raquo; &nbsp;&nbsp;&nbsp; {% endblocktrans %}</a>
+        <a class="btn btn-default btn-lg" target="_blank" href="https://flores.unu.edu/en/news/news/constructed-wetlands-to-turn-wastewater-into-energy.html" role="button">{% blocktrans %}«&nbsp;Provide: Feedback &raquo; {% endblocktrans %}</a>
+      </div>
+      </h3>
+
       <!--<h3><a class="btn btn-default btn-lg" target="_blank" href="https://flores.unu.edu/en/news/news/constructed-wetlands-to-turn-wastewater-into-energy.html" role="button">{% blocktrans %}Provide: Data &raquo;{% endblocktrans %}</a></h3>-->
 		<!-- <p>{% blocktrans %}An open source platform for sharing geospatial data and maps about constructed wetlands.{% endblocktrans %}</p>
 		<p>{% blocktrans %}If you have any questions contact <a href="https://flores.unu.edu/en/research/units/water-resources-management#team">UNU-FLORES WRM Unit</a>.{% endblocktrans %}</p> -->
+
+
 
 
     </div>

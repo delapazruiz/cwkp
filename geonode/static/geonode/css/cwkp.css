@@ -65,8 +65,13 @@ body.layers li#nav_layers a {
 
 h2, .h2 {
     text-align: justify;
-    color: #fff;
+    color: #204045;
     font-size: 20px;
+}
+
+h5, .h5 {
+    text-align: justify;
+    font-size: 18px;
 }
 
 .jumbotron p {
@@ -107,9 +112,6 @@ a {
     font-size: 15px;
 }
 
-a:hover, a:focus {
-    color: #fff;
-}
 
 img {
   width: auto;
@@ -157,5 +159,21 @@ img {
 }
 
 a:hover, a:focus {
-    color: #208391;
+    color: #49b3c5;
+}
+
+.col-md-8 {
+    width: 30.667%;
+}
+
+.col-md-4 {
+    width: 67.333%;
+}
+
+.col-md-6 {
+    width: 25%;
+}
+
+select {
+    height: 25px;
 }
