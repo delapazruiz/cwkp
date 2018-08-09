@@ -200,3 +200,7 @@ select {
 .form-control {
     height: 30px;
 }
+
+#wrap {
+    padding-top: 30px;
+}
