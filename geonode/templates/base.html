@@ -59,13 +59,14 @@
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> {% trans "Get" %} &nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></a>
                           <ul class="dropdown-menu">
                             <li><a href="/maps/">Maps</a></li>
-                            <li><a href="/statistical">Statistical information</a></li>
-                            <!--<li><a href="/documents/">Documentation</a></li>-->
-                            <li><a href="/factsheets">Fact sheets</a></li>
                             <li><a href="/gguidelines">Guidelines</a></li>
-                            <li><a href="/experts">Roster of experts</a></li>
-                            <li><a href="/learn">Learning material</a></li>
+                            <li><a href="/learn">Traning material</a></li>
                             <li><a href="/layers/">Layers</a></li>
+                            <li><a href="/experts"><p class="text-muted">*Roster of experts<i><sub><br>*(on hold)</sub></i><br></p></a></li>
+                            <li><a href="/factsheets"><p class="text-muted">*Fact sheets<i><sub><br>*(on hold)</sub></i></p></a></li>
+                            <li><a href="/statistical"> <p class="text-muted">*Statistical information<i><sub><br>*(under development)</sub></i></p></a></li>
+
+                            <!--<li><a href="/documents/">Documentation</a></li>-->
                           </ul>
                         </li>
 
@@ -82,10 +83,10 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Engage" %} &nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></a>
                             <ul class="dropdown-menu">
                                           <li><a href="/edata/">{% trans "Data" %}</a></li>
-                                          <li><a href="/eguidelines">{% trans "Guidelines" %}</a></li>
-                                          <li><a href="/faqs">FAQs</a></li>
-                                          <li><a href="/forum">{% trans "Forum" %}</a></li>
-                                          <li><a href="/handbook">Handbook/Tutorial</a></li>
+                                          <li><a href="/cwkpabout">FAQs</a></li>
+                                          <li><a href="/eguidelines"><p class="text-muted">*Guidelines<i><sub><br>*(on hold)</sub></i><br></p></a></li>
+                                          <li><a href="/forum"><p class="text-muted">*Forum<i><sub><br>*(on hold)</sub></i><br></p></a></li>
+                                          <li><a href="/handbook"><p class="text-muted">*Handbook<i><sub><br>*(on hold)</sub></i><br></p></a></li>
 
                                         </ul>
                                      </li>
@@ -93,11 +94,14 @@
               <li id="nav_layers" class="">
                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "About" %} &nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></a>
                            <ul class="dropdown-menu">
-                                           <li><a href="/copyright">{% trans "Copyright" %}</a> </li>
-                                           <li><a href="/disclaimer">{% trans "Disclaimer" %}</a> </li>
-                                           <li><a href="/contact">{% trans "Contact" %}</a></li>
-                                           <li><a href="/acknowledgements/">{% trans "Acknowledgements" %}</a></li>
                                            <li><a href="/cwkpabout/">{% trans "About the Platform" %}</a></li>
+                                           <li><a href="/acknowledgements/">{% trans "Acknowledgements" %}</a></li>
+                                           <li><a href="/contact">{% trans "Contact" %}</a></li>
+                                           <!--<li><a href="/copyright">{% trans "Copyright" %}</a> </li>
+                                           <li><a href="/disclaimer">{% trans "Disclaimer" %}</a> </li>-->
+
+
+
                                          </ul>
                                       </li>
 
@@ -126,7 +130,7 @@
             {% endblock %}
           </ul>
           <form class="navbar-form" id="search" action="{% url "search" %}" >
-            <div class="col-md-3">
+            <div class="col-md-2 col-md-offset-3">
               <div class="input-group">
                 {% if HAYSTACK_SEARCH %}
                 <input id="search_input" type="text" placeholder="Search" class="form-control" name="q">
@@ -192,46 +196,8 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
+
           <div class="col-md-4">
-            <div class="row">
-            <div class=" columns eight phone-five mar-t-10 mar-b-10 pad-footer-links  mainmenu  ">
-            				<a href="/contact">&nbsp;&nbsp;CONTACT&nbsp;&nbsp;</a>
-                    <a href="/copyright">&nbsp;&nbsp;COPYRIGHT&nbsp;&nbsp;</a>
-                    <a href="/disclaimer">&nbsp;&nbsp;PRIVACY STATEMENT&nbsp;&nbsp;</a>
-                    <a href="/termsofuse">&nbsp;&nbsp;TERMS OF USE &nbsp;&nbsp;</a>
-                    <!--<a href="/cwkpabout/">&nbsp;&nbsp;ABOUT&nbsp;&nbsp;</a>-->
-                    <label class="hidden">{% trans "Language" %}</label>
-                      {% if csrf_token != "NOTPROVIDED" %}
-                      {% get_current_language as LANGUAGE %}
-                      <!--<form class="form-inline" action="/i18n/setlang/" method="post">-->
-                      {% csrf_token %}
-                        <select class="col-md-6 pull-right" name="language" onchange="javascript:form.submit()">
-                          {% for lang in LANGUAGES %}
-                          <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
-                            {{ lang.1 }}
-                          </option>
-                          {% endfor %}
-                        </select>
-                      </form>
-                      {% endif %}
-                      <!--</ul>
-
-                        <li><a href="/copyright">Copyright</a> </li>
-                        <li><a href="/disclaimer">Disclaimer</a> </li>
-                        <li><a href="/contact">Contact</a></li>
-                        <li><a href="/acknowledgements/">Acknowledgements</a></li>
-                        <li><a href="/cwkpabout/">About the Platform</a></li>
-                        <li><a href="https://www.facebook.com/unuflores"><i class="fa fa-facebook-official fa-2x"></i>&nbsp;&nbsp;&nbsp;facebook</a></li>
-                        <li><a href="https://twitter.com/unu_flores"><i class="fa fa-twitter-square fa-2x"></i>&nbsp;&nbsp;&nbsp;twitter</a></li>
-                      --><span class="end">&nbsp;</span><!-- PRESERVED_END //-->
-
-                  </div>
-                  </div>
-
-
-
-          </div>
-          <div class="col-md-8">
 
             <ul class="list-unstyled">
             <li><img src="/static/geonode/img/logo1.png"></li>
@@ -258,6 +224,48 @@
             <a href="/developer/">Developers</a> |
             <a href="/about/">About</a>-->
           </strong></div>
+          <div class="col-md-8">
+            <div class="row">
+            <div class=" columns eight phone-five mar-t-10 mar-b-10 pad-footer-links  mainmenu  ">
+            				<a href="/contact">&nbsp;&nbsp;CONTACT&nbsp;&nbsp;</a>
+                    <a href="/copyright">&nbsp;&nbsp;COPYRIGHT&nbsp;&nbsp;</a>
+                    <a href="/disclaimer">&nbsp;&nbsp;PRIVACY STATEMENT&nbsp;&nbsp;</a>
+                    <a href="/termsofuse">&nbsp;&nbsp;TERMS OF USE &nbsp;&nbsp;</a>
+                    <!--<a href="/cwkpabout/">&nbsp;&nbsp;ABOUT&nbsp;&nbsp;</a>-->
+                    <label class="hidden">{% trans "Language" %}</label>
+                      {% if csrf_token != "NOTPROVIDED" %}
+                      {% get_current_language as LANGUAGE %}
+                      <!--<form class="form-inline" action="/i18n/setlang/" method="post">-->
+                      {% csrf_token %}
+                        <!--<select class="col-md-3 pull-right" name="language" onchange="javascript:form.submit()">
+                          {% for lang in LANGUAGES %}
+                          <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
+                            {{ lang.1 }}
+                          </option>
+                          {% endfor %}
+                        </select>
+                      </form>-->
+                      {% endif %}
+
+
+                      <!--</ul>
+
+                        <li><a href="/copyright">Copyright</a> </li>
+                        <li><a href="/disclaimer">Disclaimer</a> </li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/acknowledgements/">Acknowledgements</a></li>
+                        <li><a href="/cwkpabout/">About the Platform</a></li>
+                        <li><a href="https://www.facebook.com/unuflores"><i class="fa fa-facebook-official fa-2x"></i>&nbsp;&nbsp;&nbsp;facebook</a></li>
+                        <li><a href="https://twitter.com/unu_flores"><i class="fa fa-twitter-square fa-2x"></i>&nbsp;&nbsp;&nbsp;twitter</a></li>
+                      --><span class="end">&nbsp;</span><!-- PRESERVED_END //-->
+
+                  </div>
+                  </div>
+
+
+
+          </div>
+
         </div>
       </div>
     </footer>

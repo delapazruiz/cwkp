@@ -2,9 +2,7 @@ body {font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;}
 #aboutbutton {
     display: none;
 }
-#paneltbar {
-    margin-top: 51px;
-}
+
 button.logout {
     display: none;
 }
@@ -13,4 +11,8 @@ button.login {
 }
 .map-title-header {
     margin-right: 10px;
+}
+
+#paneltbar {
+    margin-top: 70px;
 }
