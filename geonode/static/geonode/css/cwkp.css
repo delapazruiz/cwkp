@@ -20,8 +20,12 @@ border-color: #204045;
 }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-    background-color: #fff;
-    color: #204045;
+    background-color: #204045;
+    color: #fff;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    color: #fff;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
@@ -40,6 +44,15 @@ border-color: #204045;
     margin-top: 0px;
 }
 
+.dropdown-menu {
+    background-color: #204045;
+}
+
+.dropdown-menu > li > a {
+    color: #fff;
+
+}
+
 .jumbotron {
     background: #208391;
     }
@@ -48,6 +61,7 @@ body {
 
     background: #204045;
     font-size: 15px;
+    color: #000;
 }
 
 footer {
@@ -56,7 +70,7 @@ footer {
 }
 
 body.layers li#nav_layers a {
-    color: #999;
+    color: #fff;
 }
 
 .jumbotron h1, .jumbotron .h1 {
@@ -154,8 +168,8 @@ img {
     border-color: #204045;
 }
 
-.btn {
-    font-size: 18px;
+#bindex {
+    font-size: 13px;
 }
 
 a:hover, a:focus {
@@ -173,7 +187,7 @@ a:hover, a:focus {
 }
 
 .col-md-6 {
-    width: 25%;
+    width: 50%;
 }
 
 .col-md-3 {
@@ -198,9 +212,37 @@ select {
 }*/
 
 .form-control {
-    height: 30px;
+    height: 25px;
 }
 
 #wrap {
     padding-top: 30px;
+}
+
+
+.btn-xs, .btn-group-xs > .btn {
+        font-size: 14px;
+}
+
+.list-unstyled {
+    color: #fff;
+}
+
+#unufooter {
+    float: left;
+    width: 100%;
+}
+
+#rowfotter1{
+    float: right;
+    width: 70%;
+  }
+
+#rowfotter2{
+    float: right;
+    width: 100%;
+  }
+
+.col-md-6 {
+    float: left;
 }

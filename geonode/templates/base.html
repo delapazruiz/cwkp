@@ -197,70 +197,57 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-md-4">
+          <div id=rowfotter1 class="col-md-8">
+              <div id=rowfotter2 class="row">
+                           <a href="/contact">CONTACT</a>&nbsp;&nbsp;
+                        &nbsp;&nbsp;   <a href="/copyright">COPYRIGHT</a>&nbsp;&nbsp;
+                        &nbsp;&nbsp;   <a href="/disclaimer">PRIVACY STATEMENT</a>&nbsp;&nbsp;
+                        &nbsp;&nbsp;   <a href="/termsofuse">TERMS OF USE</a>
 
-            <ul class="list-unstyled">
-            <li><img src="/static/geonode/img/logo1.png"></li>
-              <p class="text">
-              <a href="https://flores.unu.edu/en/"><li><strong>
-                UNU-FLORES<br>
-                UNU Institute for Integrated Management of<br>
-                Material Fluxes and of Resources<br>
-                <!--Advancing a Nexus Approach to the<br>
-                Sustainable Management of Water, Soil and Waste<br>-->
-              </strong></li></a>
-              </p>
+                      <!--<a href="/cwkpabout/">&nbsp;&nbsp;ABOUT&nbsp;&nbsp;</a>-->
+                      <label class="hidden">{% trans "Language" %}</label>
+                        {% if csrf_token != "NOTPROVIDED" %}
+                        {% get_current_language as LANGUAGE %}
+                        <!--<form class="form-inline" action="/i18n/setlang/" method="post">-->
+                        {% csrf_token %}
+                          <!--<select class="col-md-3 pull-right" name="language" onchange="javascript:form.submit()">
+                            {% for lang in LANGUAGES %}
+                            <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
+                              {{ lang.1 }}
+                            </option>
+                            {% endfor %}
+                          </select>
+                        </form>-->
+                        {% endif %}
+                        <!--</ul>
 
-              <li>Ammonstrasse 74<br>
-                01067 Dresden <br>
-                Germany<br>
-                <p class="text">Phone: +49 351 892193 70</p>
-              </li>
-            </ul><strong>
+                        --><span class="end">&nbsp;</span><!-- PRESERVED_END //-->
+                    </div>
+                    </div>
 
-            Developed by <br>
-            <a href="https://flores.unu.edu/en/research/units/water-resources-management#overview"> Water Resources Management Unit <br></a>
-            <em>Alpha version</em> <!--|
-            <a href="/developer/">Developers</a> |
-            <a href="/about/">About</a>-->
-          </strong></div>
-          <div class="col-md-8">
-            <div class="row">
-            <div class=" columns eight phone-five mar-t-10 mar-b-10 pad-footer-links  mainmenu  ">
-            				<a href="/contact">&nbsp;&nbsp;CONTACT&nbsp;&nbsp;</a>
-                    <a href="/copyright">&nbsp;&nbsp;COPYRIGHT&nbsp;&nbsp;</a>
-                    <a href="/disclaimer">&nbsp;&nbsp;PRIVACY STATEMENT&nbsp;&nbsp;</a>
-                    <a href="/termsofuse">&nbsp;&nbsp;TERMS OF USE &nbsp;&nbsp;</a>
-                    <!--<a href="/cwkpabout/">&nbsp;&nbsp;ABOUT&nbsp;&nbsp;</a>-->
-                    <label class="hidden">{% trans "Language" %}</label>
-                      {% if csrf_token != "NOTPROVIDED" %}
-                      {% get_current_language as LANGUAGE %}
-                      <!--<form class="form-inline" action="/i18n/setlang/" method="post">-->
-                      {% csrf_token %}
-                        <!--<select class="col-md-3 pull-right" name="language" onchange="javascript:form.submit()">
-                          {% for lang in LANGUAGES %}
-                          <option value="{{ lang.0 }}" {% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>
-                            {{ lang.1 }}
-                          </option>
-                          {% endfor %}
-                        </select>
-                      </form>-->
-                      {% endif %}
+          <div id=unufooter class="col-md-2" >
+            <ul class="list-unstyled"> <li>
+              <img src="/static/geonode/img/logo1.png">
+              <a href="https://flores.unu.edu/en/">
+             <p></p>
+             <br>UNU-FLORES<br>
+             UNU Institute for Integrated Management<br>
+             of Material Fluxes and of Resources
+             </a>
+             <p></p>
+             Ammonstrasse 74<br>
+             01067 Dresden <br>
+             Germany<br>
+             Phone: +49 351 892193 70
+             <p></p>
+             Developed by <br>
+           <a href="https://flores.unu.edu/en/research/units/water-resources-management#overview">
+             Water Resources Management Unit</a><br>
+             Alpha version
+           </li></ul>
+        </div>
 
 
-                      <!--</ul>
-
-                        <li><a href="/copyright">Copyright</a> </li>
-                        <li><a href="/disclaimer">Disclaimer</a> </li>
-                        <li><a href="/contact">Contact</a></li>
-                        <li><a href="/acknowledgements/">Acknowledgements</a></li>
-                        <li><a href="/cwkpabout/">About the Platform</a></li>
-                        <li><a href="https://www.facebook.com/unuflores"><i class="fa fa-facebook-official fa-2x"></i>&nbsp;&nbsp;&nbsp;facebook</a></li>
-                        <li><a href="https://twitter.com/unu_flores"><i class="fa fa-twitter-square fa-2x"></i>&nbsp;&nbsp;&nbsp;twitter</a></li>
-                      --><span class="end">&nbsp;</span><!-- PRESERVED_END //-->
-
-                  </div>
-                  </div>
 
 
 
@@ -271,8 +258,6 @@
     </footer>
     {% endblock footer %}
 
-
-    <!-- Modal must stay outside the navbar -->
     {% if not user.is_authenticated %}
     <div class="modal fade" id="SigninModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-sm">
