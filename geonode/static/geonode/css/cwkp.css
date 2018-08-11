@@ -246,3 +246,8 @@ select {
 .col-md-6 {
     float: left;
 }
+
+/*#myAccordion{
+  width: 30%;
+  text-align: center;
+}
