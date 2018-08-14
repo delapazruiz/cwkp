@@ -15,7 +15,7 @@
 <div class="page-header">
   <h3>{% trans "Statistical information" %}</h3>
 </div>
-<b><p class="lead">{% trans "Data analysis of the collected database" %}</p></b>
+<b><p class="lead">{% trans "Data analysis of the collected information" %}</p></b>
 
 
 
@@ -24,6 +24,29 @@
       <b><p class="lead">Advancing a Nexus Approach to the sustainable management of environmental resources</p></b>-->
       <b><p class="generic">Under Development</p></b>
       <p class="generic"> .........</p>
+
+       <p class="lead"><iframe style="border: none;" height="400" width="600" src="http://cwetlands.net/maps/4/embed"></iframe></p>
+
+       <p class="generic"><a href="
+          http://cwetlands.net/maps/4/embed
+          ">
+          • Click here to see a full screen map.
+      <br></a></p>
+
+     <!--<b><p class="generic">Description of layers categories and its labaled information displayed by default in the map.</p></b> -->
+
+        <b><p class="generic"> Name of the layer of information | Column Name: Code of the atribiute value, description | Clumn Value: Value dysplayed in the Map (unit) </p></b>
+
+
+
+        <p class="generic"> Information of the constructed wetlands system | plant_spec, Plant specie | Example: Papyrus (name)   </p>
+        <p class="generic"> Overall inflow por site of constructed wetlands | inflow_sum, Inflow sum | Example: 15193.6 (lt/s ¿?)  </p>
+        <p class="generic"> Overall inflow information per constructed wetland system | inflow_sum, Inflow sum | Example: 15193.6 (lt/s ¿?)  </p>
+        <p class="generic"> Performance of constructed wetlands per site | s_bod_effe, Removal efficiency of 5-day biochemical oxygen demand on system-level | Example: 89.379148 (%) </p>
+        <p class="generic"> Site information of constructed wetlands | ww_type_, Wastewater type | Example: municipal (name)</p>
+        <p class="generic"> Operational Information of constructed wetlands | ctry_code, Contry code | Example: USA (name)</p>
+
+
 </div>
 
 {% endblock %}
