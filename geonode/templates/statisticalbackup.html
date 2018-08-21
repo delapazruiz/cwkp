@@ -1,0 +1,358 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "Under Development" %} — {{ block.super }} {% endblock %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+
+{% block body_outer %}
+<div class="page-header">
+  <h3>{% trans "Statistical information" %}</h3>
+</div>
+<b><p class="lead">{% trans "Data analysis of the collected information" %}</p></b>
+
+
+
+<div class="text-center">
+    <!--<img src = "{{ STATIC_URL}}geonode/img/favicon.ico">
+      <b><p class="lead">Advancing a Nexus Approach to the sustainable management of environmental resources</p></b>-->
+
+      <h3> Constructed wetlands thematic maps. </h3>
+      <b>Under Development .........</b>
+
+
+      <iframe width="100%" height="520" frameborder="0" src="https://admincwetlands.carto.com/builder/8f3c73a0-faf2-4f35-9b5c-c906b97898d8/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+      <h6> Map with general information and reference of each constructed wetlands </h6>
+      <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-1" data-parent="#myAccordion">    Full database information   &nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+      <div id="collapsible-1" class="collapse">
+          <p class="generic">
+
+            <div class="embed-container">
+             <p class="lead"><iframe class="embed-responsive-item" style="border: none;" height="400" width="600" src="http://cwetlands.net/maps/4/embed" frameborder="0" allowfullscreen></iframe></p>
+           </div>
+
+             <p class="generic"><a href="
+                http://cwetlands.net/maps/4/view
+                ">
+                • Click here to explore the attribute table and the query tool.
+            <br></a></p>
+
+
+            <div class="container">
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+
+          <td>#</td>
+          <td><b> Name of the layer of information</b></td>
+          <td><b> Code of the attribute = Attribute currently displayed</b></td>
+          <td><b> Value displayed in the Map (unit)</b></td>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Information about the constructed wetlands system</td>
+          <td>plant_spec = Plant species</td>
+          <td> Papyrus (name)</td>
+
+          <tr>
+          <td>2</td>
+          <td>Overall inflow per site </td>
+          <td>inflow_sum = Inflow sum</td>
+          <td> 15193.6 (lt/s) </td>
+          </tr>
+
+          <tr>
+          <td>3</td>
+          <td>Overall inflow information per constructed wetland system</td>
+          <td>inflow_sum = Inflow sum</td>
+          <td> 930 (lt/s)</td>
+          </tr>
+
+          <tr>
+          <td>4</td>
+          <td>Performance  per site</td>
+          <td>s_bod_effe = Removal efficiency of 5-day BOD on system-level</td>
+          <td> 89.379148 (%)</td>
+          </tr>
+
+          <tr>
+          <td>5</td>
+          <td>Site information </td>
+          <td>ww_type_ = Wastewater type</td>
+          <td> Municipal (name) </td>
+          </tr>
+
+          <tr>
+          <td>6</td>
+          <td> Operational Information   </td>
+          <td> ctry_code = Country code </td>
+          <td> USA (name) </td>
+          </tr>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+      </div>
+
+      <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-2" data-parent="#myAccordion">    Supended Solids   &nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+      <div id="collapsible-2" class="collapse">
+          <p class="generic">
+
+            <div class="embed-container">
+             <p class="lead"><iframe class="embed-responsive-item" style="border: none;" height="400" width="600" src="http://cwetlands.net/maps/14/embed" frameborder="0" allowfullscreen></iframe></p>
+           </div>
+
+             <p class="generic"><a href="
+                http://cwetlands.net/maps/14/view
+                ">
+                • Click here to explore the attribute table and the query tool.
+            <br></a></p>
+
+
+            <div class="container">
+
+      <div class="table-responsive">
+      <table class="table">
+      <thead>
+        <tr>
+
+          <td>#</td>
+          <td><b> Name of the layer of information</b></td>
+          <td><b> Code of the attribute = Attribute currently displayed</b></td>
+          <td><b> Value displayed in the Map (unit)</b></td>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Inflow concentration of the total suspended solids</td>
+          <td> S_TSS_IN</td>
+          <td> 160.0 (mg/L)</td>
+
+          <tr>
+          <td>2</td>
+          <td>Outflow concentration of the total suspended solids</td>
+          <td>S_TSS_OUT</td>
+          <td> 16.0 (mg/L) </td>
+          </tr>
+
+        </tr>
+      </tbody>
+      </table>
+      </div>
+      </div>
+
+
+      </div>
+
+
+      <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-3" data-parent="#myAccordion">    Organic matter, BOD and COD   &nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+      <div id="collapsible-3" class="collapse">
+          <p class="generic">
+
+            <div class="embed-container">
+             <p class="lead"><iframe class="embed-responsive-item" style="border: none;" height="400" width="600" src="http://cwetlands.net/maps/16/embed" frameborder="0" allowfullscreen></iframe></p>
+           </div>
+
+             <p class="generic"><a href="
+                http://cwetlands.net/maps/16/view
+                ">
+                • Click here to explore the attribute table and the query tool.
+            <br></a></p>
+
+
+            <div class="container">
+
+      <div class="table-responsive">
+      <table class="table">
+      <thead>
+        <tr>
+
+          <td>#</td>
+          <td><b> Name of the layer of information</b></td>
+          <td><b> Code of the attribute = Attribute currently displayed</b></td>
+          <td><b> Value displayed in the Map (unit)</b></td>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Removal efficiency of 5-day biochemical oxygen demand on system-level</td>
+          <td> S_BOD_EFF</td>
+          <td> 95 (%)</td>
+
+          <tr>
+          <td>2</td>
+          <td>Removal efficiency of chemical oxygen demand on system-level</td>
+          <td>S_COD_EFF</td>
+          <td> 83.6 (%) </td>
+          </tr>
+
+          <td>3</td>
+          <td>System outflow concentration of the chemical oxygen demand</td>
+          <td> S_COD_OUT</td>
+          <td> 36.0 (mg/L)</td>
+
+          <tr>
+          <td>4</td>
+          <td>System inflow concentration of the chemical oxygen demand</td>
+          <td>S_COD_IN</td>
+          <td> 284.0 (mg/L) </td>
+          </tr>
+
+          <td>5</td>
+          <td>System outflow concentration of the 5-day biochemical oxygen demand</td>
+          <td> S_BOD_OUT</td>
+          <td> 27.49 (mg/L)</td>
+
+          <tr>
+          <td>6</td>
+          <td>System inflow concentration of the 5-day biochemical oxygen demand</td>
+          <td>S_BOD_IN</td>
+          <td> 78.8 (mg/L) </td>
+          </tr>
+
+        </tr>
+      </tbody>
+      </table>
+      </div>
+      </div>
+
+
+      </div>
+
+
+      <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-4" data-parent="#myAccordion">    N, P, NO3N, NH4N      &nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+      <div id="collapsible-4" class="collapse">
+          <p class="generic">
+
+            <div class="embed-container">
+             <p class="lead"><iframe class="embed-responsive-item" style="border: none;" height="400" width="600" src="http://cwetlands.net/maps/18/embed" frameborder="0" allowfullscreen></iframe></p>
+           </div>
+
+             <p class="generic"><a href="
+                http://cwetlands.net/maps/18/view
+                ">
+                • Click here to explore the attribute table and the query tool.
+            <br></a></p>
+
+
+            <div class="container">
+
+      <div class="table-responsive">
+      <table class="table">
+      <thead>
+        <tr>
+
+          <td>#</td>
+          <td><b> Name of the layer of information</b></td>
+          <td><b> Code of the attribute = Attribute currently displayed</b></td>
+          <td><b> Value displayed in the Map (unit)</b></td>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td> --- </td>
+          <td> --- </td>
+          <td> --- (mg/L)</td>
+
+          <tr>
+          <td>2</td>
+          <td> --- </td>
+          <td> --- </td>
+          <td> --- (mg/L) </td>
+          </tr>
+
+        </tr>
+      </tbody>
+      </table>
+      </div>
+      </div>
+
+
+      </div>
+
+
+
+      <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-5" data-parent="#myAccordion">       E-coli and fecal coliforms     &nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+      <div id="collapsible-5" class="collapse">
+          <p class="generic">
+
+            <div class="embed-container">
+             <p class="lead"><iframe class="embed-responsive-item" style="border: none;" height="400" width="600" src="http://cwetlands.net/maps/20/embed" frameborder="0" allowfullscreen></iframe></p>
+           </div>
+
+             <p class="generic"><a href="
+                http://cwetlands.net/maps/20/view
+                ">
+                • Click here to explore the attribute table and the query tool.
+            <br></a></p>
+
+
+            <div class="container">
+
+      <div class="table-responsive">
+      <table class="table">
+      <thead>
+        <tr>
+
+          <td>#</td>
+          <td><b> Name of the layer of information</b></td>
+          <td><b> Code of the attribute = Attribute currently displayed</b></td>
+          <td><b> Value displayed in the Map (unit)</b></td>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>---</td>
+          <td> ---</td>
+          <td> --- (mg/L)</td>
+
+          <tr>
+          <td>2</td>
+          <td>---</td>
+          <td>---</td>
+          <td>--- (mg/L) </td>
+          </tr>
+
+        </tr>
+      </tbody>
+      </table>
+      </div>
+      </div>
+
+
+      </div>
+
+
+
+
+
+</div>
+
+{% endblock %}
