@@ -1,7 +1,7 @@
 {% extends "site_base.html" %}
 
 {% load i18n %}
-{% block title %} {% trans "CW Thematic maps" %} — {{ block.super }} {% endblock %}
+{% block title %} {% trans "CW Maps" %} — {{ block.super }} {% endblock %}
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,14 +13,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
+    <link rel="stylesheet" href="css/bootstrap-pdf-viewer.css">
 
 
 {% block body_outer %}
 <div class="page-header">
-  <h3>{% trans "Constructed wetlands thematic maps" %}</h3>
+  <h3>{% trans "Constructed wetlands maps" %}</h3>
+  <b><p class="lead">{% trans "Test version under development – data visualization of non-quality controlled data " %}</p></b>
 </div>
-<b><p class="lead">{% trans "Data visualization of the collected information from scientific publications" %}</p></b>
+
 
 
 
@@ -28,13 +29,13 @@
     <!--<img src = "{{ STATIC_URL}}geonode/img/favicon.ico">
       <b><p class="lead">Advancing a Nexus Approach to the sustainable management of environmental resources</p></b>-->
 
+      <h4> Basic information of the constructed wetland system </h4>
+       This first map shows the general information and scientific reference for each constructed wetlands as well as essential local data.
+      <iframe width="100%" height="520" frameborder="0" src="https://admincwetlands.carto.com/builder/2bf20c3a-6987-489d-84b6-922d5210f4ef/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
-      <b> Alpha version </b>
+      <!--<iframe width="100%" height="520" frameborder="0" src="https://admincwetlands.carto.com/builder/8f3c73a0-faf2-4f35-9b5c-c906b97898d8/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>-->
 
-      <h6> This first map shows the general information and scientific reference for each constructed wetlands as well as essential local data. </h6>
-      <iframe width="100%" height="520" frameborder="0" src="https://admincwetlands.carto.com/builder/8f3c73a0-faf2-4f35-9b5c-c906b97898d8/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-
-      <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-1" data-parent="#myAccordion">    Full database information   &nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+      <!--<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-1" data-parent="#myAccordion">    Full database information   &nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
       <div id="collapsible-1" class="collapse">
           <p class="generic">
 
@@ -111,17 +112,18 @@
 </div>
 
 
-      </div>
+</div> -->
 
       <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-2" data-parent="#myAccordion">    Supended Solids   &nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
       <div id="collapsible-2" class="collapse">
           <p class="generic">
 
             <div class="embed-container">
-             <p class="lead"><iframe class="embed-responsive-item" style="border: none;" height="400" width="600" src="http://cwetlands.net/maps/14/embed" frameborder="0" allowfullscreen></iframe></p>
+            <iframe width="100%" height="520" frameborder="0" src="https://admincwetlands.carto.com/builder/d12fc02d-8bbd-47f4-b58c-e56abb50f03c/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+             <!--<p class="lead"><iframe class="embed-responsive-item" style="border: none;" height="400" width="600" src="http://cwetlands.net/maps/14/embed" frameborder="0" allowfullscreen></iframe></p>-->
            </div>
 
-             <p class="generic"><a href="
+             <!--<p class="generic"><a href="
                 http://cwetlands.net/maps/14/view
                 ">
                 • Click here to explore the attribute table and the query tool.
@@ -160,7 +162,7 @@
       </tbody>
       </table>
       </div>
-      </div>
+    </div>-->
 
 
       </div>
@@ -171,10 +173,11 @@
           <p class="generic">
 
             <div class="embed-container">
-             <p class="lead"><iframe class="embed-responsive-item" style="border: none;" height="400" width="600" src="http://cwetlands.net/maps/16/embed" frameborder="0" allowfullscreen></iframe></p>
+              <iframe width="100%" height="520" frameborder="0" src="https://admincwetlands.carto.com/builder/aee4738a-325e-4d81-9d99-1cb5a49746b5/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+             <!--<p class="lead"><iframe class="embed-responsive-item" style="border: none;" height="400" width="600" src="http://cwetlands.net/maps/16/embed" frameborder="0" allowfullscreen></iframe></p>-->
            </div>
 
-             <p class="generic"><a href="
+          <!--   <p class="generic"><a href="
                 http://cwetlands.net/maps/16/view
                 ">
                 • Click here to explore the attribute table and the query tool.
@@ -237,7 +240,7 @@
       </tbody>
       </table>
       </div>
-      </div>
+    </div> -->
 
 
       </div>
@@ -248,10 +251,11 @@
           <p class="generic">
 
             <div class="embed-container">
-             <p class="lead"><iframe class="embed-responsive-item" style="border: none;" height="400" width="600" src="http://cwetlands.net/maps/18/embed" frameborder="0" allowfullscreen></iframe></p>
+              <iframe width="100%" height="520" frameborder="0" src="https://admincwetlands.carto.com/builder/f5315b00-9565-47b5-8541-249b37cc4dfb/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+            <!--<p class="lead"><iframe class="embed-responsive-item" style="border: none;" height="400" width="600" src="http://cwetlands.net/maps/18/embed" frameborder="0" allowfullscreen></iframe></p>-->
            </div>
 
-             <p class="generic"><a href="
+             <!--<p class="generic"><a href="
                 http://cwetlands.net/maps/18/view
                 ">
                 • Click here to explore the attribute table and the query tool.
@@ -290,7 +294,7 @@
       </tbody>
       </table>
       </div>
-      </div>
+    </div>-->
 
 
       </div>
@@ -302,10 +306,11 @@
           <p class="generic">
 
             <div class="embed-container">
-             <p class="lead"><iframe class="embed-responsive-item" style="border: none;" height="400" width="600" src="http://cwetlands.net/maps/20/embed" frameborder="0" allowfullscreen></iframe></p>
+              <iframe width="100%" height="520" frameborder="0" src="https://admincwetlands.carto.com/builder/ed700df3-41a3-4fb7-bbd4-8d80ab32ad53/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+             <!--<p class="lead"><iframe class="embed-responsive-item" style="border: none;" height="400" width="600" src="http://cwetlands.net/maps/20/embed" frameborder="0" allowfullscreen></iframe></p>-->
            </div>
 
-             <p class="generic"><a href="
+          <!--   <p class="generic"><a href="
                 http://cwetlands.net/maps/20/view
                 ">
                 • Click here to explore the attribute table and the query tool.
@@ -344,12 +349,25 @@
       </tbody>
       </table>
       </div>
-      </div>
+    </div>-->
 
 
       </div>
 
-      <h2><p class="generic"><a href="
+      <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-6" data-parent="#myAccordion">See the structure of the database behind CWetlands<i class="fa fa-caret-down fa-lg"></i></button><br>
+      <div id="collapsible-6" class="collapse">
+          <p class="generic">
+
+            <div class="embed-container">
+              <object data="{{ STATIC_URL}}geonode/img/cwetlands_db_descriptions.pdf" type="application/pdf" width="100%" height="800px">
+              <p>It appears you don't have a PDF plugin for this browser.
+               No problem!... you can <a href="{{ STATIC_URL}}geonode/img/cwetlands_db_descriptions.pdf">click here to
+              download the PDF file.</a></p>
+             </object>
+             </div>
+           </div>
+
+      <!--<h2><p class="generic"><a href="
         http://cwetlands.net/maps/
 
       ">
@@ -363,7 +381,10 @@
       ">
          Click here to explore the entire catalog of layers that compounds the geodatabase.
 
-      <br></a></p></h2>
+      <br></a></p></h2>-->
+
+      <p class="generic">In order to engage with the platform and explore the entire catalogue of maps in more detail, please sign up to the CWetlands platform or contact us.</p>
+
 
 </div>
 

@@ -36,5 +36,18 @@ Send us an e-mail! cwkp.flores@unu.edu</p>
 <img src = "{{ STATIC_URL}}geonode/img/edata.png">
 <img src = "{{ STATIC_URL}}geonode/img/edata2.png">
 
+<button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-6" data-parent="#myAccordion">See the structure of the database behind CWetlands<i class="fa fa-caret-down fa-lg"></i></button><br>
+<div id="collapsible-6" class="collapse">
+    <p class="generic">
+
+      <div class="embed-container">
+        <object data="{{ STATIC_URL}}geonode/img/cwetlands_db_descriptions.pdf" type="application/pdf" width="100%" height="800px">
+        <p>It appears you don't have a PDF plugin for this browser.
+         No problem!... you can <a href="resume.pdf">click here to
+        download the PDF file.</a></p>
+       </object>
+       </div>
+     </div>
+
 
 {% endblock %}
