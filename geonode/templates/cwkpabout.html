@@ -15,7 +15,7 @@
 <div class="page-header">
   <h3>{% trans "About the Constructed Wetlands Knowledge Platform" %}</h3>
 </div>
-<strong><p class="lead">{% trans "Concept note" %}</p></strong>
+
 
 
 <img src = "{{ STATIC_URL}}geonode/img/cwkpmain0.jpg">
@@ -36,8 +36,59 @@ project is about.
 <div class="text-left">
   <div class="accordion" id="myAccordion">
     <div class="panel">
-          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-1" data-parent="#myAccordion">I. Problem&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
-          <div id="collapsible-1" class="collapse" class="btn btn-primary">
+
+      <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-1" data-parent="#myAccordion"> <b>Background</b> &nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+      <div id="collapsible-1" class="collapse">
+
+        <p class="generic"><b>Over 80 per cent of wastewater worldwide goes untreated.</b> As part of the United Nations Sustainable Development Goals, the international community committed to halving the proportion of untreated wastewater and increasing its recycling and safe use globally by 2030. <b>Constructed wetlands can help!</b> </p>
+
+        <p class="generic">Constructed wetlands can be <b>decentralised wastewater treatment</b> plants that are low-cost and low-maintenance. They <b>improve water quality</b> up to a level which is safe for use (e.g., for irrigation in agriculture) or for disposal to natural bodies of water. They provide biomass for the <b>production of bioenergy</b>. Moreover, they serve as a habitat for animals, or as a space for recreation and environmental education and research.</p>
+
+        <p class="generic">However, closing wastewater data gaps and involving all necessary stakeholders are critical! There is little knowledge about the number and performance of existing constructed wetlands worldwide and their contribution to wastewater treatment. Many regions, especially in developing countries, face data scarcity. Where available, the existing data is unevenly distributed.</p>
+
+        <p class="generic">That’s why researchers at UNU-FLORES have created a central online platform for constructed wetlands worldwide called <b>CWetlands – the Constructed Wetlands Knowledge Platform.</b> </p>
+
+        <p class="generic">This demand-driven platform compiles data on constructed wetlands in two ways – firstly, the project team at UNU-FLORES systematically consolidates and curates them according to user needs and secondly, users may provide their own data through an online submission mechanism. Making information available on such a platform will foster research, policy development, and financing, and empower civil society organisations and practitioners to implement constructed wetlands for achieving sustainable development. </p>
+
+      </div>
+
+      <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-2" data-parent="#myAccordion"> <b>CWetlands is</b> &nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+      <div id="collapsible-2" class="collapse">
+
+        <p class="generic">•       An open-source knowledge platform providing accessible curated data and information on constructed wetlands<br> </p>
+        <p class="generic">•       The world’s first standardised, searchable data collection and holding system on constructed wetlands worldwide<br></p>
+        <p class="generic">•       A visual, user-friendly platform offering GIS-based interactive and thematic maps<br></p>
+
+      </div>
+
+      <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-3" data-parent="#myAccordion"> <b>With Cwetlands you can</b> &nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+      <div id="collapsible-3" class="collapse">
+
+        <b><p class="generic">Ø  Explore constructed wetlands sites around the world </p></b>
+        <p class="generic">CWetlands offers an interactive world map with detailed data on constructed wetland sites around the globe. Navigate through a site and discover information about its performance, design, and much more.</p><br>
+
+        <b><p class="generic">Ø  View and download thematic maps</p></b>
+        <p class="generic">Explore thematic maps that show the global distribution of different types of constructed wetlands, the performance of these sites from around the world, and more.</p><br>
+
+        <b><p class="generic">Ø  Search and download data</p></b>
+        <p class="generic">Search for data and meta-data on performance, design, and feasibility of construct wetlands projects. The standardised data collection and holding system allow users to easily access, aggregate, compare, and download data.</p><br>
+
+        <b><p class="generic">Ø  Upload and share data</p></b>
+        <p class="generic">Supplement the curated data available on CWetlands with your own data! Submit to the platform via the online mechanism and expand the shared knowledge base.</p><br>
+
+        <b><p class="generic">Ø  Access training materials</p></b>
+        <p class="generic">CWetlands offers information and access to a variety of independent training materials on constructed wetlands, such as manuals, information on available online courses , and teaching materials for primary school classrooms.</p><br>
+
+        <b><p class="generic">Ø  Find international and local regulations and guidelines</p></b>
+        <p class="generic">In the CWetlands library, you can find guidelines and regulations on designing constructed wetlands and on the safe use of wastewater.</p><br>
+
+
+      </div>
+
+
+<!--
+          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-4" data-parent="#myAccordion">I. Problem&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+          <div id="collapsible-4" class="collapse" class="btn btn-primary">
               <p class="generic">Globally, human and environmental health is endangered in many areas. In 2015, approx. <strong>2.4 billion
               people</strong> were still using unimproved sanitation facilities. Moreover, sources estimate that around
               <strong>80% of all wastewater worldwide</strong> is released untreated into the environment, leading to
@@ -49,8 +100,8 @@ project is about.
               knowledge about the contribution of constructed wetland systems, e.g. to the global amount of
               treated wastewater. Moreover, several studies claimed limited data availability in the recent past.</p>
           </div>
-          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-2" data-parent="#myAccordion">II. Goal&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
-          <div id="collapsible-2" class="collapse">
+          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-5" data-parent="#myAccordion">II. Goal&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+          <div id="collapsible-5" class="collapse">
               <p class="generic">  The United Nations University Institute for Integrated Management of Material Fluxes and of
                 Resources (UNU-FLORES) likes to create <strong>one central platform</strong> about Constructed Wetlands worldwide,
                 consisting of a comprehensive database, including system properties and performance parameters of
@@ -62,8 +113,8 @@ project is about.
                 implementers, funding bodies, further experts and the public on a long-term basis</strong>, e.g. in CW
                 research, policy-making, financing, implementation, and operation.</p>
           </div>
-          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-3" data-parent="#myAccordion">III. Participatory Approach&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
-          <div id="collapsible-3" class="collapse">
+          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-6" data-parent="#myAccordion">III. Participatory Approach&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+          <div id="collapsible-6" class="collapse">
               <p class="generic">
                 To shape this complex web solution according to the needs of its potential users, <strong>UNU-FLORES
                 rely on <a href="http://cwetlands.net/experts/">experts</a>to:</strong></p>
@@ -72,15 +123,15 @@ project is about.
 
 
 
-                <!--particularly agency focal points for the monitoring of SDG 6,
+                particularly agency focal points for the monitoring of SDG 6,
                 researchers from the Helmholtz-Centre for Environmental Research (UFZ), members of the IWAspecialist group on Wetland Systems for Water Pollution Control, as well as further specialists,
-                for the following purposes:-->
+                for the following purposes:
                 </p>
 
           </div>
-          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-4" data-parent="#myAccordion">IV.The Overall Approach in Detail&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
-          <div id="collapsible-4" class="collapse" class="btn btn-primary">
-            <!--<p class="generic">
+          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-7" data-parent="#myAccordion"><b>The Overall Approach in Detail</b>&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+          <div id="collapsible-7" class="collapse" class="btn btn-primary">
+            <p class="generic">
               The project work will begin with a <strong>comprehensive review of existing databases and literature</strong> about
               Constructed Wetlands, to gain an overview of available data which might be useful for suggesting
               potential database variables to stakeholders. This comprehensive review includes a special emphasis
@@ -109,7 +160,7 @@ project is about.
               All in all, through this online information system, UNU-FLORES aims to contribute to the development
               of integrated strategies for the sustainable development of environmental resources, such as water,
               soil, and waste.
-            </p>-->
+            </p>
 
           <p class="generic">The project undertook a <strong>comprehensive review of existing databases and literature</strong> about Constructed Wetlands, to gain an overview of available data which might be useful for suggesting potential database variables to stakeholders.
           This comprehensive review included a special emphasis on sludge drying reed beds. <strong>A short preliminary survey</strong> to the experts and <strong>a stakeholder survey</strong> provided <strong>essential elements for the design of the platform.</strong></p>
@@ -120,36 +171,35 @@ project is about.
 
 
           </div>
-          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-5" data-parent="#myAccordion">V. Why are we doing this?&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
-          <div id="collapsible-5" class="collapse">
+          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-8" data-parent="#myAccordion"> <b>Questions about the CWetlands project</b>  &nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
+          <div id="collapsible-8" class="collapse">
 
+              V. Why are we doing this?
               <p class="genericli">• Achieving water- and related SDGs</p>
               <p class="genericli">• Knowing the number of Constructed Wetlands in the world and the amount of wastewater they treat to indicate the importance of this technology compared with others</p>
               <p class="genericli">• Highlight the ‚multifunctionality‘, the multiple services and benefits Constructed Wetlands provide</p>
-          </div>
-          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-6" data-parent="#myAccordion">VI. What are the primary goals of the platform?&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
-          <div id="collapsible-6" class="collapse">
+
+              VI. What are the primary goals of the platform?
               <p class="generic">• Supporting ...</p>
               <p class="generic">• Assessing the contribution of constructed wetlands to wastewater treatment and reuse worldwide</p>
-          </div>
-          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-7" data-parent="#myAccordion">VII. What are the target groups?&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
-          <div id="collapsible-7" class="collapse" class="btn btn-primary">
+
+              VII. What are the target groups?
               <p class="generic">• Researchers: ...</p>
               <p class="generic">• Consulting engineers: ...</p>
               <p class="generic">• Construction companies: ...</p>
               <p class="generic">• Intergovernmental Organisations...</p>
               <p class="generic">• Financial sector...</p>
               <p class="generic">• Civil Society and its Organisations</p>
-          </div>
-          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-8" data-parent="#myAccordion">VIII. What can you use the platform for?&nbsp;&nbsp;<i class="fa fa-caret-down fa-lg"></i></button><br>
-          <div id="collapsible-8" class="collapse">
+              VIII. What can you use the platform for?
               <p class="generic">• Get to know the fundamentals of Constructed Wetlands (Learning Page)</p>
               <p class="generic">• Get to know Constructed Wetlands in a certain area, maybe in your neighbourhood, and retrieve core information (WebGIS)</p>
               <p class="generic">• Compare and visualize data (database)</p>
               <p class="generic">• Provide data to increase the knowledge base on Constructed Wetlands (Crowdsourcing)</p>
               <p class="generic">• Retrieve extensive information (database download)</p>
+
           </div>
-          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-6" data-parent="#myAccordion">See the structure of the database behind CWetlands<i class="fa fa-caret-down fa-lg"></i></button><br>
+-->
+          <button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#collapsible-9" data-parent="#myAccordion"> <b>See the structure of the database behind CWetlands</b> <i class="fa fa-caret-down fa-lg"></i></button><br>
           <div id="collapsible-9" class="collapse">
               <p class="generic">
 
@@ -163,6 +213,7 @@ project is about.
                </div>
       </div>
     </div>
+<p class="generic">Cwetlands is one of the prime outcomes of the project <a href="https://unu.edu/projects/the-multifunctionality-of-constructed-wetlands.html">“The Multifunctionality of Constructed Wetlands”</a> at [flores.unu.edu]UNU-FLORES.</p>
 </div>
 
 {% endblock %}
