@@ -70,6 +70,7 @@ urlpatterns = patterns('',
                        url(r'^edata/$', TemplateView.as_view(template_name='edata.html'), name='edata'),
                        url(r'^termsofuse/$', TemplateView.as_view(template_name='termsofuse.html'), name='edata'),
                        url(r'^gmaps/$', TemplateView.as_view(template_name='gmaps.html'), name='gmaps'),
+                       url(r'^statisticaltest/$', TemplateView.as_view(template_name='statisticaltest.html'), name='statisticaltest'),
 
                        # Layer views
                        (r'^layers/', include('geonode.layers.urls')),

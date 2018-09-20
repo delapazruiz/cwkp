@@ -1,0 +1,41 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "Feature Information" %} — {{ block.super }} {% endblock %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+
+{% block body_outer %}
+<div class="page-header">
+  <h3>{% trans "Constructed wetlands features" %}</h3>
+  <b><p class="lead">{% trans "Data analysis of the collected information" %}</p></b>
+  <div class="text-center">Test version under development – data visualization of non-quality-controlled data</div>
+</div>
+
+
+
+
+<div class="text-center">
+    <!--<img src = "{{ STATIC_URL}}geonode/img/favicon.ico">
+      <b><p class="lead">Advancing a Nexus Approach to the sustainable management of environmental resources</p></b>-->
+
+
+
+              <object data="{{ STATIC_URL}}geonode/img/Leaflet_ClasesofDroughtandWetness/Clases of Drought and Wetness.html" width="100%" height="800px">
+
+
+
+</div>
+
+{% endblock %}

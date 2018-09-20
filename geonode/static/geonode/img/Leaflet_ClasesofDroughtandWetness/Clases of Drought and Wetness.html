@@ -1,0 +1,271 @@
+<html>
+<head>
+	<title>Leaflet template</title>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<style>
+		html, body, #mapDiv {
+		height: 100%;
+		}
+		
+		.legend {
+			color: #555;
+		}
+
+		.legend ul {
+			padding: 0px;
+			margin: 0px;
+		}
+
+		.legend i {
+			width: 18px;
+			height: 18px;
+			float: left;
+			margin-right: 8px;
+			opacity: 0.7;
+		}
+
+		.legend li {
+			height: 18px;
+			list-style: none;
+		}
+
+		.info {
+			padding: 6px 8px;
+			font: 14px/16px Arial, Helvetica, sans-serif;
+			background: white;
+			background: rgba(255, 255, 255, 1);
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+			border-radius: 5px;
+		}
+
+		.info h4 {
+			margin: 0 0 5px;
+			color: #777;
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<div id="mapDiv"></div>
+	<script>
+		// When the webpage is ready (loaded)
+		var map;
+		$(document).ready(function() {
+			map = new L.Map('mapDiv',{
+				center:[19.31, -99.11],
+				zoom: 10
+			});
+			// Credit where credit is due
+			var attribution = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+			
+			
+			// This allows concurrent calls (faster tile loading)
+			var subdomains = ['a', 'b', 'c'];
+			
+			// Settings common to all tiles we'll be using
+			var tile_settings = {
+				maxZoom: 21,
+				attribution: attribution,
+				subdomains: subdomains
+			};
+
+			// All three Stamen map tile layers
+			var toner = 'http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png';
+			var water = 'http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png';
+			var osm = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+
+			// Create a 'list' of tile layer objects	
+			tiles = {
+				"OSM": new L.TileLayer(osm, tile_settings),
+				"Toner": new L.TileLayer(toner, tile_settings),
+				"Watercolor": new L.TileLayer(water, tile_settings)
+			}
+
+			// Add first layer to the map
+			map.addLayer(tiles["OSM"]);
+			
+			// And create a 'control' to toggle between layers
+			//L.control.layers(tiles).addTo(map);
+		
+			// AJAX call to load the GeoJSON data
+			
+			var controlLayers = L.control.layers(tiles).addTo(map);
+						
+											
+			$.getJSON("rcp1.gjson", function(data) {
+				// When geojson is loaded...
+				var geojson1 = new L.GeoJSON(data, {style: style, onEachFeature: onEachFeature}); 
+				// And create a 'control' to toggle between layers
+				controlLayers.addOverlay(geojson1, "January");
+			});
+						
+			$.getJSON("rcp2.gjson", function(data) {
+				// When geojson is loaded...
+				var geojson2 = new L.GeoJSON(data, {style: style, onEachFeature: onEachFeature}).addTo(map); 
+				// And create a 'control' to toggle between layers
+				controlLayers.addOverlay(geojson2, "Febrary");
+			});
+			
+			$.getJSON("rcp3.gjson", function(data) {
+				// When geojson is loaded...
+				var geojson3 = new L.GeoJSON(data, {style: style, onEachFeature: onEachFeature}); 
+				// And create a 'control' to toggle between layers
+				controlLayers.addOverlay(geojson3, "March");
+			});
+			
+			$.getJSON("rcp4.gjson", function(data) {
+				// When geojson is loaded...
+				var geojson4 = new L.GeoJSON(data, {style: style, onEachFeature: onEachFeature}); 
+				// And create a 'control' to toggle between layers
+				controlLayers.addOverlay(geojson4, "April");
+			});
+			
+			$.getJSON("rcp5.gjson", function(data) {
+				// When geojson is loaded...
+				var geojson5 = new L.GeoJSON(data, {style: style, onEachFeature: onEachFeature}); 
+				// And create a 'control' to toggle between layers
+				controlLayers.addOverlay(geojson5, "May");
+			});
+			
+			$.getJSON("rcp6.gjson", function(data) {
+				// When geojson is loaded...
+				var geojson6 = new L.GeoJSON(data, {style: style, onEachFeature: onEachFeature}); 
+				// And create a 'control' to toggle between layers
+				controlLayers.addOverlay(geojson6, "June");
+			});
+			
+			$.getJSON("rcp7.gjson", function(data) {
+				// When geojson is loaded...
+				var geojson7 = new L.GeoJSON(data, {style: style, onEachFeature: onEachFeature}); 
+				// And create a 'control' to toggle between layers
+				controlLayers.addOverlay(geojson7, "July");
+			});
+			
+			$.getJSON("rcp8.gjson", function(data) {
+				// When geojson is loaded...
+				var geojson8 = new L.GeoJSON(data, {style: style, onEachFeature: onEachFeature}); 
+				// And create a 'control' to toggle between layers
+				controlLayers.addOverlay(geojson8, "August");
+			});
+			
+			$.getJSON("rcp9.gjson", function(data) {
+				// When geojson is loaded...
+				var geojson9 = new L.GeoJSON(data, {style: style, onEachFeature: onEachFeature}); 
+				// And create a 'control' to toggle between layers
+				controlLayers.addOverlay(geojson9, "September");
+			});
+			
+			$.getJSON("rcp10.gjson", function(data) {
+				// When geojson is loaded...
+				var geojson10 = new L.GeoJSON(data, {style: style, onEachFeature: onEachFeature}); 
+				// And create a 'control' to toggle between layers
+				controlLayers.addOverlay(geojson10, "October");
+			});
+			
+			$.getJSON("rcp11.gjson", function(data) {
+				// When geojson is loaded...
+				var geojson11 = new L.GeoJSON(data, {style: style, onEachFeature: onEachFeature}); 
+				// And create a 'control' to toggle between layers
+				controlLayers.addOverlay(geojson11, "November");
+			});
+			
+			$.getJSON("rcp12.gjson", function(data) {
+				// When geojson is loaded...
+				var geojson12 = new L.GeoJSON(data, {style: style, onEachFeature: onEachFeature}); 
+				// And create a 'control' to toggle between layers
+				controlLayers.addOverlay(geojson12, "Diciember");
+			});
+			
+			
+			
+			var popup = L.popup();
+
+			function onEachFeature(feature, layer) {
+				layer.on({click: onMapClick})
+			}
+
+			function onMapClick(e) {
+				var name = e.target.feature.properties.attribute;
+				popup
+					.setLatLng(e.latlng)
+					.setContent(name)
+					.openOn(map);
+			};
+			
+						
+			function getColor(d) {
+					
+				return	d == -9.000000  ? '#662506' :
+					d == -8.000000  ? '#993404' :
+					d == -7.000000  ? '#cc4c02' :
+					d == -6.000000  ? '#ec7014' :
+					d == -5.000000  ? '#fe9929' :
+					d == -3.000000  ? '#fee391' :
+					d == -4.000000  ? '#fec44f' :
+					d == -2.000000  ? '#fff7bc' :
+					d == -1.000000  ? '#ffffe5' :
+					d == 1.000000  ? '#fff7fb' :
+					d == 2.000000  ? '#ece7f2' :
+					d == 3.000000  ? '#d0d1e6' :
+					d == 4.000000  ? '#a6bddb' :
+					d == 5.000000  ? '#74a9cf' :
+					d == 6.000000  ? '#3690c0' :
+					d == 7.000000  ? '#0570b0' :
+					d == 8.000000  ? '#045a8d' :
+					d == 9.000000  ? '#023858' :
+							'#ffff33' ;
+			}
+
+			function style(feature) {
+				return {
+					fillColor: getColor(feature.properties.value),
+					weight: 1,
+					opacity: 1,
+					color: 'white',
+					dashArray: '1',
+					fillOpacity: 0.7
+				};
+			}
+			
+			// Add a legend
+			var legend = L.control({
+				position: 'bottomleft'
+			});
+
+			legend.onAdd = function(map) {
+
+				var div = L.DomUtil.create('div', 'info legend'),
+					polys = ['-9', '-8', '-7', '-6', '-5', '-4', '-3', '-2', '-1', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+					labels = ['D4.3:Exceptional Drought', 'D4.2:Exceptional Drought', 'D4.1:Exceptional Drought', 'D4.0:Exceptional Drought', 'D3:Extreme Drought', 'D2:Severe Drought', 'D1:Moderate Drought', 'D0:Abnormally Dry', 'D00:Normally Dry', 'W00:Normally Wet', 'W0:Abnormally Wet', 'W1:Moderate Wet', 'W2:Severe Wet', 'W3:Extreme Wet', 'W4.0:Exceptional Wet', 'W4.1:Exceptional Wet', 'W4.2:Exceptional Wet', 'W4.3:Exceptional Wet'];
+
+				// Loop through our zones and generate a label with a colored
+				// square for each interval
+				var html = '<h4>Clases of Drought and Wetness</h4><ul>'
+				for (var i = 0; i < polys.length; i++) {
+					html +=
+						'<li><i style="background:' + getColor(polys[i]) + '"></i> ' +
+						" " + labels[i] + '</li>';
+				}
+				html += '</ul>';
+				div.innerHTML = html;
+				return div;
+			};
+			legend.addTo(map);
+			
+			// Add Scale Bar to Map
+			L.control.scale({position: 'bottomright'}).addTo(map);
+			
+			$.getJSON("delegaciones.geojson", function(data) {
+				// When geojson is loaded...
+				var geojson0 = new L.GeoJSON(data).addTo(map); 
+				// And create a 'control' to toggle between layers
+				controlLayers.addOverlay(geojson0, "CDMX Delegaciones");
+			});
+						
+		});
+	</script>
+</body>
+</html>
