@@ -1,7 +1,7 @@
 {% extends "site_base.html" %}
 
 {% load i18n %}
-{% block title %} {% trans "Acknowledgements" %} — {{ block.super }} {% endblock %}
+{% block title %} {% trans "Partners and Contributors" %} — {{ block.super }} {% endblock %}
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,37 +13,39 @@
 
 {% block body_outer %}
 <div class="page-header">
-  <h3>{% trans "Acknowledgements" %}</h3>
+  <h3>{% trans "Partners and Contributors" %}</h3>
 </div>
 
 
 <div class="text-center">
 
-      <b><p class="generic">  Since the very beginning of the project, the team is working closely with a group of experts.</p></b>
-      <b><p class="generic">Special thanks go to: </p></b>
+      <b><p class="generic"> Partners </p></b> <br>
+<p class="generic"> Under the strategic partnership with Technische Universität Dresden (<a href="https://tu-dresden.de/"> <em>TU Dresden </em></a>), UNU-FLORES is cooperating in particular with the <a href="https://tu-dresden.de/bu/umwelt"> <em>Faculty of Environmental Sciences </em></a>.</p>
+<p class="generic">We would like to thank Christina Dornack, Peter Krebs, Thomas Schalk, Thomas Petzoldt, Thomas Berendonk, Karsten Calbitz and Rudolf Liedl for the supervision or coordination of thesis and study projects within the scope of CWetlands.  </p><br><br>
 
-      <p class="generic">
+<b><p class="generic"> Contributors </p></b><br>
+<p class="generic">Since the early stages of the project, the following experts have been working closely with us:</p><br>
+
+
 </div>
 
 <ul class="list-unstyled">
-  <li><p class="generic"> Christina Dornack, Institute of Waste Management and Circular Economy, TU Dresden </p></li>
-  <li><p class="generic"> Peter Krebs, Institute of Urban and Industrial Water Management, TU Dresden </p></li>
-  <li><p class="generic"> Thomas Petzoldt, Institute of Hydrobiology, TU Dresden </p></li>
-  <li><p class="generic"> Rudolf Liedl, Institute of Groundwater Management, TU Dresden </p></li>
-  <li><p class="generic"> Günter Langergraber, University of Natural Resources and Life Sciences, Vienna </p></li>
-  <li><p class="generic"> Fabio Masi, IRIDRA S.r.l. </p></li>
-  <li><p class="generic"> Andrei Jouravlev, ECLAC </p></li>
-  <li><p class="generic"> Virginie Gillet, FAO </p></li>
-  <li><p class="generic"> Roshan Shrestha, Bill and Melinda Gates Foundation (BMGF) </p></li>
-  <li><p class="generic"> Ania Grobicki, former Secretary General of The Ramsar Convention Secretariat </p></li>
-  <li><p class="generic"> Kate Medlicott, WHO </p></li>
-  <li><p class="generic"> Uwe Kappelmeyer, Helmholtz-Zentrum für Umweltforschung (UFZ) </p></li>
-  <li><p class="generic"> Christine Galander, German Environment Agency (UBA) </p></li>
-  <li><p class="generic"> Christian Wilhelm, German Association for Water, Wastewater and Waste (DWA) </p></li>
-  <li><p class="generic"> Godecke-Tobias Blecken, Luleå Techniska Universitet (LTU) </p></li>
-  <li><p class="generic"> Furthermore, we would like to thank all participants of the global user requirements survey in 2017. </p></li>
+  <li><p class="generic"> • Günter Langergraber, University of Natural Resources and Life Sciences, Vienna </p></li>
+  <li><p class="generic"> • Fabio Masi, IRIDRA S.r.l. </p></li>
+  <li><p class="generic"> • Andrei Jouravlev, ECLAC </p></li>
+  <li><p class="generic"> • Virginie Gillet, FAO </p></li>
+  <li><p class="generic"> • Roshan Shrestha, Bill and Melinda Gates Foundation (BMGF) </p></li>
+  <li><p class="generic"> • Ania Grobicki, former Secretary General of The Ramsar Convention Secretariat </p></li>
+  <li><p class="generic"> • Kate Medlicott, WHO </p></li>
+  <li><p class="generic"> • Uwe Kappelmeyer, Helmholtz-Zentrum für Umweltforschung (UFZ) </p></li>
+  <li><p class="generic"> • Christine Galander, German Environment Agency (UBA) </p></li>
+  <li><p class="generic"> • Christian Wilhelm, German Association for Water, Wastewater and Waste (DWA) </p></li>
+  <li><p class="generic"> • Godecke-Tobias Blecken, Luleå Techniska Universitet (LTU) </p></li>
+</ul><br>
+  <p class="generic"> Moreover, we would like to thank all participants of the global user requirements survey in 2017. </p>
+  <p class="generic">Last but not least, the students Sowmiya Ragul, Mauricio Nevado and Muhammad Awais studying the master programme “Hydro Sciences and Engineering” at TU Dresden carried out their study project under our supervision and developed an <a href="https://github.com/CWetlands"> <em>R tool </em></a> for the extraction of information on constructed wetlands from scientific journal articles.</p>
 
-</ul>
+
 
 
 {% endblock %}
