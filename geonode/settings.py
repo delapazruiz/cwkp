@@ -271,6 +271,7 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'django.contrib.gis',
 
+
     # Third party apps
 
     # Utility
@@ -303,6 +304,7 @@ INSTALLED_APPS = (
     'tastypie',
     'polymorphic',
     'guardian',
+    #'contact',
 
 ) + GEONODE_APPS
 

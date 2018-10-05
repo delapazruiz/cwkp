@@ -17,6 +17,10 @@
 #
 #########################################################################
 
+###
+#from geonode.contact import views
+###
+
 from django.conf.urls import include, patterns, url
 from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -24,6 +28,7 @@ from django.conf.urls.static import static
 from geonode.sitemap import LayerSitemap, MapSitemap
 from django.views.generic import TemplateView
 from django.contrib import admin
+
 
 import geonode.proxy.urls
 
@@ -46,6 +51,8 @@ sitemaps = {
     "map": MapSitemap
 }
 
+
+
 urlpatterns = patterns('',
 
                        # Static pages
@@ -55,7 +62,8 @@ urlpatterns = patterns('',
                        url(r'^about/$', TemplateView.as_view(template_name='about.html'), name='about'),
                        url(r'^cwkpabout/$', TemplateView.as_view(template_name='cwkpabout.html'), name='cwkpabout'),
                        url(r'^acknowledgements/$', TemplateView.as_view(template_name='acknowledgements.html'), name='acknowledgements'),
-                       url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
+                       url(r'^contact1/$', TemplateView.as_view(template_name='contact1.html'), name='contact1'),
+                       #url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
                        url(r'^disclaimer/$', TemplateView.as_view(template_name='disclaimer.html'), name='disclaimer'),
                        url(r'^copyright/$', TemplateView.as_view(template_name='copyright.html'), name='copyright'),
                        url(r'^eguidelines/$', TemplateView.as_view(template_name='eguidelines.html'), name='eguidelines'),
@@ -86,6 +94,12 @@ urlpatterns = patterns('',
 
                        # Search views
                        url(r'^search/$', TemplateView.as_view(template_name='search/search.html'), name='search'),
+
+                       #######
+                       #Contact
+                       #(r'^contact/', include('geonode.contact.urls')),
+                       #######
+
 
                        # Social views
                        (r"^account/", include("account.urls")),

@@ -17,6 +17,9 @@
 #
 #########################################################################
 
+
+
+
 from django import forms
 from django.contrib.auth import authenticate, login, get_user_model
 from django.http import HttpResponse, HttpResponseRedirect
@@ -24,6 +27,8 @@ from django.core.urlresolvers import reverse
 from django.utils import simplejson as json
 from django.db.models import Q
 from django.template.response import TemplateResponse
+
+
 
 from geonode.groups.models import GroupProfile
 
